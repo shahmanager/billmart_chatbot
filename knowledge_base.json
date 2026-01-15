@@ -1,0 +1,242 @@
+{
+  "platform": {
+    "name": "BillMart",
+    "description": "BillMart is a FinTech platform offering digital lending solutions for trade finance, catering to individuals, businesses, and lenders. It provides seamless, cost-efficient, end-to-end digital transactions supported by AI and data insights.",
+    "userTypes": ["Individual", "Business", "Lender"],
+    "registration": {
+      "process": "Sign up digitally with KYC, GSTIN, CIN, bank details, MSME registration, and upload documents. Takes about 2 business days.",
+      "charges": "No registration, data, documentation, annual, or transaction charges currently.",
+      "authorizedPerson": "Requires digital signature or Aadhaar-based e-sign by an authorized person."
+    },
+    "financialInfo": {
+      "nachMandate": "Authorization for debiting funds if payment not made on maturity. Helps in getting more finance limits and lower costs.",
+      "dataSecurity": "Financial info is secure; shared with banks/NBFCs/financers/insurers/credit rating agencies with consent for evaluation."
+    },
+    "transactions": {
+      "supported": "Working capital with Bill (Invoice) Financing, Discounting, Reverse Bill Discounting, Supply Chain Finance.",
+      "billTypes": "Valid GST bills/invoices for goods/services, outstanding/receivable, not older than 3 months, minimum Rs. 50,000.",
+      "maxTenure": "180 days for bill discounting.",
+      "recourse": "Guarantee to settle if counterparty fails; optional or mandatory based on entity/transaction."
+    },
+    "termsAndConditions": {
+      "summary": "Users agree to terms by using the platform. Includes data security, no unauthorized use, disclaimers on third-party services.",
+      "governingLaw": "Laws of India, jurisdiction in Mumbai courts."
+    },
+    "privacyPolicy": {
+      "summary": "Collects user data, application data, website data. Used for service provision, compliance, marketing. Shared with service providers, subsidiaries. Retained as necessary; rights to access, erase, etc."
+    },
+    "contacts": {
+      "mumbai": "+91 93269 46663, connect@billmart.com, 1102, K.P Aurum, Marol Maroshi Rd, Andheri East, Mumbai 400059",
+      "delhi": "903, Surya Kiran Building, KG Marg, CP, New Delhi 110001"
+    },
+    "lastUpdated": "March 09, 2022"
+  },
+  "products": [
+    {
+      "name": "Vendor Finance",
+      "category": "Supply Chain Finance",
+      "description": "Finance solution where suppliers (vendors) offer unsecured funding to buyers, supported by trade confirmations from the buyer (Anchor). Enables suppliers to access credit lines or deferred payments.",
+      "howItWorks": [
+        "Buyer advances purchase order to Supplier.",
+        "Supplier provides goods/services and raises invoice.",
+        "Buyer requests funding from financer based on accepted invoice.",
+        "Financer validates and disburses to Supplier's account.",
+        "Buyer repays on due date."
+      ],
+      "benefits": ["Quick funds with minimal documentation", "Improved cash flow", "Off-balance-sheet for anchor", "No collateral required"],
+      "faqs": [
+        {"q": "What is Vendor Financing?", "a": "Vendors receive funds against supply, facilitated by anchor's arrangement with financer."},
+        {"q": "Key stakeholders?", "a": "Vendor (seller/borrower) and anchor (buyer)."},
+        {"q": "Benefits for vendors?", "a": "Quick funds, minimal docs, improved cash flow."},
+        {"q": "Anchor liability?", "a": "No, off-balance-sheet."},
+        {"q": "Collateral required?", "a": "No."}
+      ],
+      "rbiGuidelines": "Under RBI's MSME lending framework (Master Direction on Lending to MSMEs), vendor finance must adhere to priority sector lending norms if targeting MSMEs. RBI scrutiny on NBFC supply chain products requires treating as term loans, not revolving credit, to prevent evergreening. Compliance with KYC/AML and fair practices code mandatory. Recent RBI directives (2024) emphasize full fee disclosure and prohibit closed-group matching.",
+      "taxRegulations": "Interest on vendor finance is subject to GST at 18% as financial services. TDS under Section 194J (10% on professional fees if applicable) or 194C (2% on contracts). Income from financing treated as business income under Income Tax Act; deductions for bad debts under Section 36(1)(vii)."
+    },
+    {
+      "name": "Sales Bill Discounting",
+      "category": "Supply Chain Finance",
+      "description": "Allows MSMEs (sellers) to sell receivables (invoices) to a financial institution at a discount for immediate cash, enhancing cash flow.",
+      "howItWorks": [
+        "Buyer advances purchase order to Supplier.",
+        "Supplier provides goods/services and raises invoice.",
+        "Supplier sells invoice to financer for funding.",
+        "Financer validates and disburses to Supplier.",
+        "Buyer repays on due date."
+      ],
+      "benefits": ["Improves cash flow", "Reduces bad debt risks", "Maintains working capital", "No buyer's guarantee", "No collateral"],
+      "faqs": [
+        {"q": "What is Sales Bill Discounting?", "a": "Vendors receive immediate funds against sales invoices."},
+        {"q": "Who can avail?", "a": "Vendors seeking immediate funds."},
+        {"q": "Advantage?", "a": "Better cash flow, reduced risks."},
+        {"q": "Differs from Vendor Financing?", "a": "No buyer's guarantee."},
+        {"q": "Collateral required?", "a": "No."}
+      ],
+      "rbiGuidelines": "Governed by RBI's TReDS guidelines (Trade Receivables Discounting System) for MSMEs. Transactions 'without recourse' to sellers. Banks/NBFCs must comply with bill discounting norms under Working Group on Discounting of Bills (1999), including widening to services sector. Platforms like TReDS require RBI authorization under PSS Act 2007. Recent rules prohibit prepayment penalties on floating rate loans for individuals (effective 2025).",
+      "taxRegulations": "Discounting charges subject to GST at 18%. TDS on interest under Section 194A (10% if exceeding Rs. 5,000). Gains from discounting treated as business income; input tax credit available on GST paid."
+    },
+    {
+      "name": "Purchase Bill Discounting",
+      "category": "Supply Chain Finance",
+      "description": "Allows buyers to submit unpaid purchase invoices for immediate cash, with disbursement directly to vendor. Buyer acts as borrower; no vendor guarantee.",
+      "howItWorks": [
+        "Buyer advances purchase order to Supplier.",
+        "Supplier provides goods/services and raises invoice.",
+        "Buyer sells invoice to financer for funding.",
+        "Financer validates and disburses to Supplier.",
+        "Buyer repays on due date."
+      ],
+      "benefits": ["Immediate funds", "Better vendor relationships", "Reduced delays", "No collateral", "Suitable for MSMEs"],
+      "faqs": [
+        {"q": "What is Purchase Invoice Discounting?", "a": "Buyer secures funds to pay suppliers early; financer pays directly."},
+        {"q": "Who benefits?", "a": "Buyers and vendors streamlining payments."},
+        {"q": "Key benefits for buyers?", "a": "Access to funds, better relationships."},
+        {"q": "Collateral required?", "a": "No."},
+        {"q": "For small businesses?", "a": "Yes, for all sizes including MSMEs."}
+      ],
+      "rbiGuidelines": "Similar to sales bill discounting under TReDS. RBI mandates transparency in rates and compliance with MSME lending directives. Treated as term loans; recent scrutiny on NBFCs to avoid misclassification as revolving credit.",
+      "taxRegulations": "GST at 18% on financing fees. TDS under Section 194A on interest payments. Loan interest deductible as business expense under Section 37 of Income Tax Act."
+    },
+    {
+      "name": "Dealer Finance",
+      "category": "Supply Chain Finance",
+      "description": "Unsecured financing for dealers to procure goods from Anchors without immediate payment. Dealer acts as borrower; Anchor may guarantee optionally.",
+      "howItWorks": [
+        "Pull Method: Dealer requests goods; Anchor requests funding; Financer disburses to Anchor; Goods delivered; Dealer repays.",
+        "Push Method: Dealer requests goods and funding; Financer disburses to Anchor; Goods delivered; Dealer repays."
+      ],
+      "benefits": ["Improved working capital", "Better supplier relationships", "Enhanced purchasing power", "Based on sales/creditworthiness", "No collateral"],
+      "faqs": [
+        {"q": "What is Dealer Finance?", "a": "Credit for dealers to purchase stock based on credit profile."},
+        {"q": "Benefits?", "a": "Working capital, supplier relations, growth."},
+        {"q": "Loan determination?", "a": "Based on sales and creditworthiness."},
+        {"q": "Eligibility?", "a": "Stable credit history, consistent sales."},
+        {"q": "Collateral?", "a": "No."}
+      ],
+      "rbiGuidelines": "Under RBI's dealer financing schemes (e.g., South Indian Bank's Vendor Financing Scheme), limits per dealer up to Rs. 20 crore. Must follow internal bank norms, KYC, and primary security on invoices. RBI's franchisee model for money changing applies indirectly for restricted activities.",
+      "taxRegulations": "GST on interest at 18%. TDS under Section 194C for contract-based payments. Interest expense deductible under Income Tax."
+    },
+    {
+      "name": "Early Payment Finance",
+      "category": "Supply Chain Finance",
+      "description": "Trade financing to bridge gap between distributor and retailer, offering discounts for early payments and credit terms.",
+      "howItWorks": [
+        "Buyer requests goods from Anchor.",
+        "Anchor requests funding based on invoice.",
+        "Financer disburses to Anchor.",
+        "Financer offers discounts for early repayment by buyer.",
+        "Buyer repays on or before due date."
+      ],
+      "benefits": ["Encourages early payments with discounts", "Flexible terms", "Adjustable credit limits", "No collateral"],
+      "faqs": [
+        {"q": "What is Early Payment Discount?", "a": "Program to encourage retailers to pay ahead with discounts."},
+        {"q": "Eligibility?", "a": "Distributors with registered retailers."},
+        {"q": "Subvention Period?", "a": "Initial timeframe with upfront payment minus interest."},
+        {"q": "Subvention Interest?", "a": "Fee calculated as percentage of invoice."},
+        {"q": "Customized terms?", "a": "Yes, within guidelines."},
+        {"q": "Collateral?", "a": "No."}
+      ],
+      "rbiGuidelines": "Aligned with RBI's supply chain finance tightening (2024), treated as term loans with fixed schedules. No prepayment penalties on floating rate loans for individuals (2025 directive). Compliance with AML/KYC mandatory.",
+      "taxRegulations": "Discounts may qualify as business expense under Section 37. GST on financing at 18%; TDS on interest if applicable."
+    },
+    {
+      "name": "Lease Rental Discounting",
+      "category": "Standalone",
+      "description": "Financing to unlock value of future rental cash flows by leveraging lease agreements.",
+      "howItWorks": [
+        "Property owner requests funding based on rental bonds and schedules.",
+        "Operators act as approval party.",
+        "Financer validates and disburses to owner.",
+        "Owner repays as per schedule."
+      ],
+      "benefits": ["Fast application", "Competitive rates", "Flexible terms", "Quick disbursement", "Transparent", "No collateral"],
+      "faqs": [
+        {"q": "Registration process?", "a": "Simple digital signup with KYC etc., 2 business days."},
+        {"q": "Charges?", "a": "None currently."},
+        {"q": "Authorized person?", "a": "Digital sign required."}
+      ],
+      "rbiGuidelines": "RBI allows LRD as term loans with max tenure 15 years (10 for specialized properties). Must follow fair practices code; no prepayment charges on floating rate individual loans (2025). Compliance with capital adequacy for lenders.",
+      "taxRegulations": "Rental income taxable under 'Income from House Property'; loan interest deductible. GST not applicable on rentals but on financing fees at 18%. TDS under Section 194-I (10% on rent > Rs. 2.4 lakh/year)."
+    },
+    {
+      "name": "Term Loan",
+      "category": "Standalone",
+      "description": "Sanctioned upfront amount repaid with fixed schedule and variable interest based on market and financials. For established businesses/individuals.",
+      "howItWorks": ["Apply with details", "Eligibility check", "Approval and disbursement", "Repay in EMIs"],
+      "benefits": ["Fast application", "Competitive rates", "Flexible repayment", "Quick disbursement", "Transparent", "No collateral"],
+      "faqs": [
+        {"q": "Repayment?", "a": "Fixed EMIs; partial prepayment allowed."},
+        {"q": "Examples?", "a": "Personal, Education, Car Loans; secured/unsecured."},
+        {"q": "Vs. Cash Credit?", "a": "Depends on needs; term loans for specific purposes."},
+        {"q": "EMI calculation?", "a": "Use calculator for monthly amounts."}
+      ],
+      "rbiGuidelines": "RBI's Master Directions for term loans require direct remittance to suppliers for specific purposes. No prepayment charges on floating rate non-business loans for individuals (2025). Banks/NBFCs must assess creditworthiness and follow FPC.",
+      "taxRegulations": "Interest deductible as business expense (Section 36/37). GST on processing fees at 18%. TDS under Section 194A if interest > Rs. 5,000."
+    },
+    {
+      "name": "Short Term Loan (BEST Loan)",
+      "category": "Standalone",
+      "description": "Small-value, short-period financing for immediate liquidity, cash flow gaps, or expenses.",
+      "howItWorks": [
+        "Apply online with KYC and financial data.",
+        "Eligibility check by financers.",
+        "Approval and instant disbursement.",
+        "Flexible repayment."
+      ],
+      "benefits": ["Fast disbursement", "Simplified process", "Transparent terms", "Customizable", "Dedicated support"],
+      "faqs": [
+        {"q": "Eligibility?", "a": "Individuals/MSMEs with KYC and creditworthiness."},
+        {"q": "Interest rate?", "a": "Competitive, based on profile."},
+        {"q": "Disbursal time?", "a": "Within 24 hours."},
+        {"q": "Documents?", "a": "KYC, bank statements, GST filings."},
+        {"q": "Early repayment penalty?", "a": "None; encouraged."},
+        {"q": "Collateral?", "a": "No."},
+        {"q": "Late repayment?", "a": "Nominal penalties; reminders provided."}
+      ],
+      "rbiGuidelines": "Treated as term loans under RBI's short-term lending norms. Must comply with MSME directives if applicable; recent rules bar prepayment charges on floating rate individual loans.",
+      "taxRegulations": "Interest subject to GST at 18%. Deductible under Income Tax as business expense. TDS applicable if interest thresholds met."
+    }
+  ],
+  "additionalProducts": [
+    {
+      "name": "Employee Cash",
+      "description": "Salary advance for employees to access earnings before payday. Linked to salary for seamless repayment.",
+      "howItWorks": ["Login/KYC", "Apply for advance", "Instant approval", "Withdraw", "Receive funds", "Auto-repayment from paycheck."],
+      "benefits": ["Instant access", "No long-term debt", "Hassle-free", "Transparent/low-cost", "Secure"],
+      "faqs": ["Eligibility: Salaried employees with partnered employers.", "Amount: Up to 50% of earned salary.", "Credit score impact: May affect; timely payments help."],
+      "rbiGuidelines": "As personal loans, follow RBI's guidelines on eligibility, transparency, and no prepayment penalties (2025).",
+      "taxRegulations": "Advances treated as salary; TDS under Section 192. Interest GST at 18%."
+    },
+    {
+      "name": "GigCash",
+      "description": "Funding for gig workers based on earnings; auto-repayment from platform earnings.",
+      "howItWorks": ["Sign up/verify", "Check eligibility", "Request advance", "Instant approval/disbursement", "Auto-repayment."],
+      "benefits": ["Fast access", "Designed for gig workers", "No collateral/credit score", "Transparent", "Auto-repayment"],
+      "faqs": ["Eligibility: Gig workers on verified platforms.", "Amount: Up to 50% of monthly earnings.", "Credit impact: May affect."],
+      "rbiGuidelines": "Treated as short-term loans; comply with RBI's fintech lending norms.",
+      "taxRegulations": "Income from advances taxable; GST on fees."
+    },
+    {
+      "name": "Insurance Claim Finance",
+      "description": "Immediate funds for hospitals awaiting insurance payouts to maintain liquidity.",
+      "howItWorks": ["Hospital processes claim", "Raises funding request", "Financer validates/disburses", "Hospital repays."],
+      "benefits": ["Quick approvals", "Competitive rates", "Uninterrupted operations", "Transparent", "Secure"],
+      "faqs": ["What is ICF?: Funds while waiting for claims.", "Access time: 24-48 hours.", "Collateral: No."],
+      "rbiGuidelines": "RBI allows foreign currency settlements for claims with conditions (e.g., admitted by insurer, to non-resident beneficiary). Prior approval for forex payments.",
+      "taxRegulations": "Financing fees GST at 18%. Claims income taxable; deductions for expenses."
+    },
+    {
+      "name": "iMARK (AI Rating Key)",
+      "description": "AI-powered credit grading for MSMEs providing insights into creditworthiness.",
+      "howItWorks": ["Submit documents", "Initial review", "Financial analysis", "Grading assessment", "Dissemination."],
+      "benefits": ["Tailored for SMEs/MSMEs", "Affordable", "Improves financing access", "Supports growth"],
+      "faqs": ["What is iMARK?: AI credit grading tool.", "Helps growth: Better decisions, secure financing."],
+      "rbiGuidelines": "Aligns with RBI's credit assessment norms for MSMEs; no specific product regs but follows general lending guidelines.",
+      "taxRegulations": "Fees subject to GST at 18%; business expense deductible."
+    }
+  ],
+  "generalRbiGuidelines": "RBI oversees all products via Master Directions on NBFC lending, MSME financing, and TReDS. Key: KYC/AML compliance, fair practices, no evergreening in supply chain finance (2024). Prepayment bars on floating rate loans (2025).",
+  "generalTaxRegulations": "GST at 18% on financial services fees/interest (exempt for pure interest in some cases). TDS on interest (Section 194A), rent (194-I), contracts (194C). Business expenses deductible under Income Tax Act. Consult CA for specifics—tax is nuanced and location-dependent.",
+  "lastUpdated": "August 03, 2025"
+}

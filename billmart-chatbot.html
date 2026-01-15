@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BillMart Chatbot</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #billmart-chatbot-launcher {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff9100, #ff7b00);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(255, 145, 0, 0.4);
+            transition: transform 0.2s ease;
+        }
+
+        #billmart-chatbot-launcher:hover {
+            transform: scale(1.10);
+        }
+
+        #billmart-chatbot-launcher img {
+            width: 50px;
+            height: 50px;
+            filter: brightness(00.2s) invert();
+        }
+
+        #billmart-chatbot-window {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 380px;
+            height: 540px; /* Increased height */
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            z-index: 10000;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #ff9100, #ff7b00);
+            color: white;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            font-size: 16px;
+            position: relative;
+            flex-shrink: 0; /* Prevent header from shrinking */
+        }
+
+        .chat-header img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background: rgba(255,255,255,0.2);
+            padding: 4px;
+        }
+
+        .chat-header-text {
+            flex: 1;
+        }
+
+        .chat-subtitle {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-top: 1px;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 4px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+
+        .close-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        #billmart-chatbot-content {
+            height: 410px; /* Fixed height for scrolling */
+            overflow-y: auto;
+            overflow-x: hidden;
+            background: #f8f9fa;
+            position: relative;
+        }
+
+        /* WELCOME SCREEN LAYOUT */
+        .welcome-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+        }
+
+        .welcome-section {
+            background: white;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            flex-shrink: 0;
+        }
+
+        .intro-text {
+            text-align: center;
+            color: #333;
+            margin: 0;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .faq-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-height: 0; /* Important for flexbox scrolling */
+        }
+
+        .faq-scroll-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 12px;
+        }
+
+        .faq-btn {
+            width: 100%;
+            margin: 6px 0;
+            padding: 12px 14px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            background: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            color: #495057;
+            text-align: left;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            /* TEXT OVERFLOW FIXES */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            line-height: 1.3;
+            min-height: fit-content;
+        }
+
+        .faq-btn:hover {
+            background: #f8f9fa;
+            border-color: #ff9100;
+            color: #ff9100;
+        }
+
+        .talk-with-bot {
+            margin: 12px;
+            padding: 14px 16px;
+            background: linear-gradient(135deg, #ff9100, #ff7b00);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            flex-shrink: 0; /* Always visible */
+        }
+
+        .talk-with-bot:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(255, 145, 0, 0.3);
+        }
+
+        .talk-subtitle {
+            font-size: 12px;
+            margin-top: 2px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        /* CHAT MESSAGES */
+        .chat-messages {
+            padding: 16px;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .message {
+            margin: 12px 0;
+            display: flex;
+            max-width: 100%;
+            /* TEXT OVERFLOW PREVENTION */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .user-message {
+            justify-content: flex-end;
+        }
+
+        .bot-message {
+            justify-content: flex-start;
+        }
+
+        .user-message span {
+            background: linear-gradient(135deg, #ff9100, #ff7b00);
+            color: white;
+            padding: 10px 14px;
+            border-radius: 18px 18px 4px 18px;
+            max-width: 85%;
+            font-size: 14px;
+            /* CRITICAL TEXT FIXES */
+            word-wrap: break-word;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            white-space: pre-wrap;
+            line-height: 1.4;
+            display: inline-block;
+        }
+
+        .bot-message span {
+            background: white;
+            color: #333;
+            padding: 10px 14px;
+            border-radius: 18px 18px 18px 4px;
+            max-width: 85%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            font-size: 14px;
+            /* CRITICAL TEXT FIXES */
+            word-wrap: break-word;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            white-space: pre-wrap;
+            line-height: 1.4;
+            display: inline-block;
+        }
+
+        .quick-replies {
+            margin: 8px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            max-width: 85%;
+        }
+
+        .quick-reply-btn {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 13px;
+            color: #495057;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            text-align: left;
+            /* TEXT OVERFLOW FIXES */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            white-space: normal;
+            line-height: 1.3;
+        }
+
+        .quick-reply-btn:hover {
+            background: #ff9100;
+            color: white;
+            border-color: #ff9100;
+        }
+
+        .chat-input-area {
+            padding: 12px 16px;
+            background: white;
+            border-top: 1px solid #e9ecef;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        #billmart-chatbot-input {
+            flex: 1;
+            padding: 10px 14px;
+            border: 1px solid #e9ecef;
+            border-radius: 20px;
+            font-size: 14px;
+            outline: none;
+            background: #f8f9fa;
+            resize: none;
+            /* TEXT INPUT FIXES */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-height: 100px;
+        }
+
+        #billmart-chatbot-input:focus {
+            border-color: #ff9100;
+            background: white;
+        }
+
+        .send-btn {
+            background: linear-gradient(135deg, #ff9100, #ff7b00);
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .send-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .send-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .powered-by {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.95);
+            padding: 8px;
+            text-align: center;
+            font-size: 11px;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+            backdrop-filter: blur(5px);
+        }
+
+        .powered-by a {
+            color: #ff9100;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* CUSTOM SCROLLBAR */
+        #billmart-chatbot-content::-webkit-scrollbar,
+        .faq-scroll-area::-webkit-scrollbar,
+        .chat-messages::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        #billmart-chatbot-content::-webkit-scrollbar-track,
+        .faq-scroll-area::-webkit-scrollbar-track,
+        .chat-messages::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        #billmart-chatbot-content::-webkit-scrollbar-thumb,
+        .faq-scroll-area::-webkit-scrollbar-thumb,
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 10px;
+        }
+
+        #billmart-chatbot-content::-webkit-scrollbar-thumb:hover,
+        .faq-scroll-area::-webkit-scrollbar-thumb:hover,
+        .chat-messages::-webkit-scrollbar-thumb:hover {
+            background: #a8a8a8;
+        }
+        
+        #billmart-chatbot-window {
+            bottom: 120px !important; /* Raise the entire window */
+            height: 600px !important; /* Make it taller */
+            }
+
+        #billmart-chatbot-content {
+            height: 470px !important; /* More content space */
+        }
+
+        .powered-by {
+            bottom: 4px !important; /* Move up slightly */
+            font-size: 9px !important; /* Smaller text */
+            padding: 4px !important; /* Less padding */
+        }
+        #billmart-chatbot-window {
+            transform: scale(0.70);
+            transform-origin: bottom right;
+        }
+        #billmart-chatbot-launcher{
+            transform: scale(0.75);
+            transform-origin: bottom right;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- Floating Chat Button -->
+<div id="billmart-chatbot-launcher">
+    <img src="./chat bot logo.png" alt="Chat">
+</div>
+
+<!-- Chat Window -->
+<div id="billmart-chatbot-window">
+    <div class="chat-header">
+        <img src="./chat bot logo.png" alt="Bot">
+        <div class="chat-header-text">
+            <div>AI Chatbot</div>
+            <div class="chat-subtitle">Our chatbot is here to assist you instantly</div>
+        </div>
+        <button class="close-btn" onclick="closeChatbot()">×</button>
+    </div>
+    
+    <div id="billmart-chatbot-content"></div>
+    
+    <div class="chat-input-area">
+        <input 
+            id="billmart-chatbot-input" 
+            type="text" 
+            placeholder="Ask questions and get immediate responses" 
+            onkeypress="handleKeyPress(event)"
+            autocomplete="off"
+        >
+        <button class="send-btn" onclick="sendUserMessage()" id="send-button">
+            <svg width="16" height="16" fill="white" viewBox="0 0 24 24">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+        </button>
+    </div>
+    
+    <!-- Powered by BillMart -->
+    <div class="powered-by">
+        Powered by <a href="#" target="_blank">BillMart</a>
+    </div>
+</div>
+
+<script>
+// Configuration
+const RASA_API_URL = "http://localhost:5005/webhooks/rest/webhook";
+
+// FAQ options
+const faqs = [
+    { title: "What is GigCash?", payload: "/ask_gigcash_info" },
+    { title: "How to apply for EmpCash?", payload: "/ask_empcash_info" },
+    { title: "What is Supply Chain Finance?", payload: "/ask_supply_chain_finance" },
+    { title: "What documents are needed?", payload: "/ask_documents" },
+    { title: "Contact information", payload: "/ask_contact_info" },
+    { title: "What is Vendor Finance?", payload: "/ask_vendor_finance" },
+    { title: "What is Dealer Finance?", payload: "/ask_dealer_finance" },
+    { title: "Insurance Claim Finance details", payload: "/ask_insurance_claim_finance" }
+];
+
+let isWelcomeMode = true;
+
+// Show/hide chat window
+document.getElementById('billmart-chatbot-launcher').onclick = function() {
+    document.getElementById('billmart-chatbot-window').style.display = 'block';
+    if (isWelcomeMode) {
+        showWelcomeScreen();
+    }
+};
+
+function closeChatbot() {
+    document.getElementById('billmart-chatbot-window').style.display = 'none';
+}
+
+// Handle Enter key press
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        sendUserMessage();
+    }
+}
+
+// Show welcome screen with scrollable FAQ
+function showWelcomeScreen() {
+    const content = document.getElementById('billmart-chatbot-content');
+    content.innerHTML = `
+        <div class="welcome-container">
+            <div class="welcome-section">
+                <div class="intro-text">What do you want to know?</div>
+            </div>
+            <div class="faq-container">
+                <div class="faq-scroll-area">
+                    ${faqs.map(faq => 
+                        `<button class="faq-btn" onclick="sendFAQ('${faq.payload}', '${faq.title}')">${faq.title}</button>`
+                    ).join('')}
+                </div>
+                <button class="talk-with-bot" onclick="showChatInput()">
+                    💬 Talk with Chatbot
+                    <div class="talk-subtitle">The chatbot will respond immediately</div>
+                </button>
+            </div>
+        </div>
+    `;
+    document.querySelector('.chat-input-area').style.display = 'none';
+    isWelcomeMode = true;
+}
+
+function showChatInput() {
+    isWelcomeMode = false;
+    document.getElementById('billmart-chatbot-content').innerHTML = '<div class="chat-messages"></div>';
+    document.querySelector('.chat-input-area').style.display = 'flex';
+    document.getElementById('billmart-chatbot-input').focus();
+}
+
+// Send FAQ selection
+function sendFAQ(payload, title) {
+    showChatInput();
+    setTimeout(() => {
+        addUserMessage(title);
+        sendToRasa(payload);
+    }, 100);
+}
+
+// Send user typed message
+function sendUserMessage() {
+    const input = document.getElementById('billmart-chatbot-input');
+    const message = input.value.trim();
+    if (!message) return;
+    
+    addUserMessage(message);
+    sendToRasa(message);
+    input.value = '';
+}
+
+// Add user message to chat
+function addUserMessage(text) {
+    const chatMessages = document.querySelector('.chat-messages');
+    if (!chatMessages) return;
+    
+    // Break very long words to prevent overflow
+    const processedText = text.replace(/(\S{40,})/g, (match) => {
+        return match.replace(/(.{40})/g, '$1\u200B');
+    });
+    
+    chatMessages.innerHTML += `
+        <div class="message user-message">
+            <span>${escapeHtml(processedText)}</span>
+        </div>
+    `;
+    scrollToBottom();
+}
+
+// Add bot message with optional quick replies
+
+function addBotMessage(text, buttons = []) {
+    const chatMessages = document.querySelector('.chat-messages');
+    if (!chatMessages) return;
+    
+    // Process markdown and long words
+    const processedText = processMarkdown(text.replace(/(\S{40,})/g, (match) => {
+        return match.replace(/(.{40})/g, '$1\u200B');
+    }));
+    
+    let buttonHtml = '';
+    if (buttons && buttons.length > 0) {
+        buttonHtml = `
+            <div class="quick-replies">
+                ${buttons.map(btn => 
+                    `<button class="quick-reply-btn" onclick="sendFAQ('${btn.payload}', '${btn.title}')">${btn.title}</button>`
+                ).join('')}
+            </div>
+        `;
+    }
+    
+    chatMessages.innerHTML += `
+        <div class="message bot-message">
+            <span>${processedText}</span>
+        </div>
+        ${buttonHtml}
+    `;
+   
+}
+
+// Send message to Rasa
+function sendToRasa(message) {
+    const sendBtn = document.getElementById('send-button');
+    sendBtn.disabled = true;
+    
+    fetch(RASA_API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            sender: "user_" + getSessionId(),
+            message: message
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data && data.length > 0) {
+            data.forEach(msg => {
+                addBotMessage(msg.text || "", msg.buttons || []);
+            });
+        } else {
+            addBotMessage("Sorry, I didn't understand that. Could you please rephrase?");
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        addBotMessage("Sorry, I'm having trouble connecting. Please try again later.");
+    })
+    .finally(() => {
+        sendBtn.disabled = false;
+    });
+}
+
+// Improved scroll to bottom function
+function scrollToBottom() {
+    const content = document.getElementById('billmart-chatbot-content');
+    const chatMessages = document.querySelector('.chat-messages');
+    
+    if (chatMessages) {
+        // Scroll the chat messages container
+        setTimeout(() => {
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 100);
+    } else if (content) {
+        // Scroll the main content area
+        setTimeout(() => {
+            content.scrollTop = content.scrollHeight;
+        }, 100);
+    }
+}
+
+// Utility functions
+function getSessionId() {
+    if (!window._billmartChatSession) {
+        window._billmartChatSession = Math.random().toString(36).substring(2, 10);
+    }
+    return window._billmartChatSession;
+}
+
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+function processMarkdown(text) {
+    return text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')  // Bold
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')              // Italic
+        .replace(/\n/g, '<br>')                            // Line breaks
+        .replace(/•/g, '&bull;')                           // Bullet points
+        .replace(/→/g, '&rarr;')                           // Arrows
+        .replace(/✅/g, '&#x2705;')                         // Checkmarks
+        .replace(/❌/g, '&#x274C;');                        // X marks
+}
+</script>
+
+</body>
+</html>

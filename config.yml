@@ -1,0 +1,82 @@
+recipe: default.v1
+assistant_id: billmart-sales-bot-2025
+language: en
+
+pipeline:
+  # Step 1: Text tokenization
+  - name: WhitespaceTokenizer
+  - name: components.typo_corrector.TypoCorrectorComponent
+  
+  # Step 2: Pattern recognition
+  - name: RegexFeaturizer
+  
+  # Step 3: Linguistic features
+  - name: LexicalSyntacticFeaturizer
+  
+  # Step 4: Word-level features
+  - name: CountVectorsFeaturizer
+    analyzer: word
+    min_ngram: 1
+    max_ngram: 3
+  
+  # Step 5: Character-level features (helps with spelling mistakes)
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  
+  # Step 6: Main intent classifier (FIXED - no duplicate epochs)
+  - name: DIETClassifier
+    epochs: 150
+    use_gpu: true
+    constrain_similarities: true
+    model_confidence: softmax
+    loss_type: cross_entropy
+    ranking_length: 10
+    BILOU_flag: false
+    use_masked_language_model: true
+    transformer_size: 256
+    number_of_transformer_layers: 2
+    number_of_attention_heads: 4
+    use_key_relative_attention: false
+    use_value_relative_attention: false
+    max_relative_position: 5
+    batch_size: [64, 256]
+    batch_strategy: "balanced"
+    eval_file: null
+    random_seed: 1
+    learning_rate: 0.001
+  
+  # Step 7: Entity synonyms
+  - name: EntitySynonymMapper
+  
+  # Step 8: Response selector
+  - name: ResponseSelector
+    epochs: 150
+    constrain_similarities: true
+    model_confidence: softmax
+  
+  # Step 9: Fallback for unclear inputs
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+
+# Conversation Management Policies
+policies:
+  # Policy 1: Remember exact patterns
+  - name: MemoizationPolicy
+  
+  # Policy 2: Handle rules
+  - name: RulePolicy
+    core_fallback_threshold: 0.3
+    core_fallback_action_name: "action_default_fallback"
+    enable_fallback_prediction: true
+  
+  
+  # Policy 4: Main conversation policy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 150
+    constrain_similarities: true
+    model_confidence: softmax
+    use_gpu: true

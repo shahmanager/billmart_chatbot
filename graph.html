@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rasa Core Visualisation</title>
+    <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.min.js"></script>
+    <script src="https://dagrejs.github.io/project/dagre/latest/dagre.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://dagrejs.github.io/project/graphlib-dot/v0.6.3/graphlib-dot.js"></script>
+</head>
+<body>
+<div id="errormsg" style="color: #b00"></div>
+<svg>
+    <style id="graph-style">
+        .node.invisible > rect {
+            display: none;
+        }
+
+        .node.start > rect {
+            fill: #7f7;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node.end > rect {
+            fill: #f77;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node:not(.active) > rect, .node:not(.active) > .label {
+            opacity: 0.4;
+        }
+
+        .edgePath:not(.active) path {
+            opacity: 0.4;
+        }
+
+        .node.ellipsis > rect {
+            fill: #CCC;
+        }
+
+        .node.intent > rect {
+            fill: #7ff;
+        }
+
+        .node.dashed > rect {
+            stroke-dasharray: 5;
+        }
+
+        text {
+            font-weight: 300;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serf, serif;
+            font-size: 14px;
+            color: #1f1d1d;
+        }
+
+        .node rect {
+            stroke: #444;
+            fill: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .edgePath path {
+            stroke: #333;
+            stroke-width: 1.5px;
+        }
+
+        svg {
+            position: fixed;
+            top: 10px;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <g></g>
+</svg>
+<script>
+
+  function serveGraph() {
+    let oldInputGraphValue;
+
+    const url = 'visualization.dot';
+    const refreshInterval = 500;
+
+    // trigger a refresh by fetching an updated graph
+    setInterval(function () {
+      fetch(url).then(r => r.text()).then(dot => {
+        document.getElementById('errormsg').innerHTML = '';
+        if (oldInputGraphValue === dot) return;
+
+        oldInputGraphValue = dot;
+        drawGraph(dot);
+      }).catch(err => {
+        document.getElementById('errormsg').innerHTML =
+          'Failed to update plot. (' + err.message + ')';
+      });
+    }, refreshInterval);
+  }
+
+  function drawGraph(graph) {
+    let g = graphlibDot.read(graph);
+    // Set margins, if not present
+    if (!g.graph().hasOwnProperty("marginx") &&
+      !g.graph().hasOwnProperty("marginy")) {
+      g.graph().marginx = 20;
+      g.graph().marginy = 20;
+    }
+    g.graph().transition = function (selection) {
+      return selection.transition().duration(300);
+    };
+    // Render the graph into svg g
+    d3.select("svg g").call(render, g);
+  }
+  // Set up zoom support
+  const svg = d3.select("svg"),
+    inner = d3.select("svg g"),
+    zoom = d3.zoom().on("zoom", function () {
+      inner.attr("transform", d3.event.transform);
+    });
+  svg.call(zoom);
+
+  // Create and configure the renderer
+  const render = dagreD3.render();
+
+  let isClient = false;
+  isClient = true;
+
+  if (isClient) {
+    // Mark all nodes and their edges as active
+    cssRules = document.getElementById('graph-style').sheet.cssRules;
+    cssRules[3].style.opacity = 1;
+    cssRules[4].style.opacity = 1;
+
+    let graph;
+    graph = `digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class="", fontsize=12, label=action_process_with_minimal_state];
+4 [class="", fontsize=12, label=action_process_with_minimal_state];
+7 [class="", fontsize=12, label=action_process_with_minimal_state];
+8 [class="", fontsize=12, label=utter_scf_process];
+9 [class="", fontsize=12, label=utter_scf_requirements];
+10 [class="", fontsize=12, label=utter_scf_benefits];
+11 [class="", fontsize=12, label=utter_vendor_finance];
+13 [class="", fontsize=12, label=utter_sales_bill_discounting];
+15 [class="", fontsize=12, label=utter_purchase_bill_discounting];
+17 [class="", fontsize=12, label=utter_dealer_finance];
+19 [class="", fontsize=12, label=utter_early_payment_finance];
+21 [class="", fontsize=12, label=action_process_with_minimal_state];
+22 [class="", fontsize=12, label=utter_empcash_eligibility];
+23 [class="", fontsize=12, label=utter_empcash_amount_limit];
+24 [class="", fontsize=12, label=utter_empcash_fees];
+25 [class="", fontsize=12, label=utter_empcash_credit_impact];
+26 [class="", fontsize=12, label=utter_empcash_speed];
+27 [class="", fontsize=12, label=utter_empcash_multiple_usage];
+28 [class="", fontsize=12, label=action_process_with_minimal_state];
+29 [class="", fontsize=12, label=utter_gigcash_eligibility];
+30 [class="", fontsize=12, label=utter_gigcash_funding_amount];
+31 [class="", fontsize=12, label=utter_gigcash_fees];
+32 [class="", fontsize=12, label=utter_gigcash_credit_impact];
+33 [class="", fontsize=12, label=utter_gigcash_speed];
+34 [class="", fontsize=12, label=utter_gigcash_irregular_income];
+35 [class="", fontsize=12, label=utter_insurance_claim_finance];
+36 [class="", fontsize=12, label=utter_icf_speed];
+37 [class="", fontsize=12, label=utter_icf_difference];
+38 [class="", fontsize=12, label=utter_icf_collateral];
+39 [class="", fontsize=12, label=utter_icf_application];
+40 [class="", fontsize=12, label=utter_icf_claim_process];
+41 [class="", fontsize=12, label=utter_icf_data_safety];
+42 [class="", fontsize=12, label=utter_icf_delays];
+43 [class="", fontsize=12, label=utter_lease_rental_discounting];
+44 [class="", fontsize=12, label=utter_term_loan];
+45 [class="", fontsize=12, label=utter_short_term_loan];
+46 [class="", fontsize=12, label=utter_imark_info];
+47 [class="", fontsize=12, label=utter_registration_process];
+48 [class="", fontsize=12, label=utter_registration_charges];
+49 [class="", fontsize=12, label=utter_who_can_register];
+50 [class="", fontsize=12, label=utter_nach_mandate];
+51 [class="", fontsize=12, label=utter_nach_benefits];
+52 [class="", fontsize=12, label=utter_data_security];
+53 [class="", fontsize=12, label=utter_supported_transactions];
+54 [class="", fontsize=12, label=utter_bill_types];
+55 [class="", fontsize=12, label=utter_bill_restrictions];
+56 [class="", fontsize=12, label=utter_discounting_percentage];
+57 [class="", fontsize=12, label=utter_maximum_tenure];
+58 [class="", fontsize=12, label=utter_recourse_transaction];
+59 [class="", fontsize=12, label=utter_deal_note];
+60 [class="", fontsize=12, label=utter_fund_crediting];
+61 [class="", fontsize=12, label=utter_settlement_payment];
+62 [class="", fontsize=12, label=utter_contact_info];
+63 [class="", fontsize=12, label=utter_status];
+64 [class="", fontsize=12, label=utter_file_complaint];
+66 [class="", fontsize=12, label=action_provide_eligibility_info];
+67 [class="", fontsize=12, label=action_smart_demo];
+68 [class="", fontsize=12, label=utter_thank_you];
+69 [class="", fontsize=12, label=utter_goodbye];
+75 [class="", fontsize=12, label=action_process_with_minimal_state];
+77 [class="", fontsize=12, label=action_process_with_minimal_state];
+78 [class="", fontsize=12, label=utter_company_info];
+79 [class="", fontsize=12, label="..."];
+84 [class="", fontsize=12, label=utter_scf_collateral];
+90 [class="", fontsize=12, label=utter_contact_info];
+92 [class="", fontsize=12, label=utter_services_offered];
+94 [class="", fontsize=12, label=utter_documents];
+98 [class="", fontsize=12, label=utter_thank_you];
+99 [class="", fontsize=12, label=action_session_start];
+100 [class="", fontsize=12, label=utter_greet];
+101 [class="", fontsize=12, label=utter_services_brief];
+121 [class=intent, fillcolor=lightblue, label="I need cash", shape=rect, style=filled];
+122 [class=intent, fillcolor=lightblue, label="I am a credit provider", shape=rect, style=filled];
+123 [class=intent, fillcolor=lightblue, label="Process for insurance claim finance", shape=rect, style=filled];
+124 [class=intent, fillcolor=lightblue, label="/nlu_fallback", shape=rect, style=filled];
+125 [class=intent, fillcolor=lightblue, label="business founder", shape=rect, style=filled];
+126 [class=intent, fillcolor=lightblue, label="/declare_individual_borrower", shape=rect, style=filled];
+127 [class=intent, fillcolor=lightblue, label="supply chain finance details", shape=rect, style=filled];
+128 [class=intent, fillcolor=lightblue, label="Vendor support", shape=rect, style=filled];
+129 [class=intent, fillcolor=lightblue, label="sales invoice", shape=rect, style=filled];
+130 [class=intent, fillcolor=lightblue, label="purchase bill", shape=rect, style=filled];
+131 [class=intent, fillcolor=lightblue, label="Tell me about dealer finance", shape=rect, style=filled];
+132 [class=intent, fillcolor=lightblue, label="early payment solution", shape=rect, style=filled];
+133 [class=intent, fillcolor=lightblue, label="empcash details", shape=rect, style=filled];
+134 [class=intent, fillcolor=lightblue, label="gig cash", shape=rect, style=filled];
+135 [class=intent, fillcolor=lightblue, label="Hospital financing", shape=rect, style=filled];
+136 [class=intent, fillcolor=lightblue, label="lease rental discounting details", shape=rect, style=filled];
+137 [class=intent, fillcolor=lightblue, label="term loan details", shape=rect, style=filled];
+138 [class=intent, fillcolor=lightblue, label="short term loan details", shape=rect, style=filled];
+139 [class=intent, fillcolor=lightblue, label="iMARK product", shape=rect, style=filled];
+140 [class=intent, fillcolor=lightblue, label="Business onboarding", shape=rect, style=filled];
+141 [class=intent, fillcolor=lightblue, label="Is NACH required?", shape=rect, style=filled];
+142 [class=intent, fillcolor=lightblue, label="Can I do bill discounting?", shape=rect, style=filled];
+143 [class=intent, fillcolor=lightblue, label="When is the fund credited?", shape=rect, style=filled];
+144 [class=intent, fillcolor=lightblue, label="Give me your email", shape=rect, style=filled];
+145 [class=intent, fillcolor=lightblue, label="Am I eligible?", shape=rect, style=filled];
+146 [class=intent, fillcolor=lightblue, label="Schedule a call", shape=rect, style=filled];
+147 [class=intent, fillcolor=lightblue, label="Thank you", shape=rect, style=filled];
+148 [class=intent, fillcolor=lightblue, label=financer, shape=rect, style=filled];
+149 [class=intent, fillcolor=lightblue, label="independent contractor", shape=rect, style=filled];
+150 [class=intent, fillcolor=lightblue, label="application process", shape=rect, style=filled];
+151 [class=intent, fillcolor=lightblue, label="supply chain finance", shape=rect, style=filled];
+152 [class=intent, fillcolor=lightblue, label=process, shape=rect, style=filled];
+153 [class=intent, fillcolor=lightblue, label="what is gigcash", shape=rect, style=filled];
+154 [class=intent, fillcolor=lightblue, label="supply chain finance details", shape=rect, style=filled];
+155 [class=intent, fillcolor=lightblue, label="whats the process", shape=rect, style=filled];
+156 [class=intent, fillcolor=lightblue, label="What documents for supply chain finance?", shape=rect, style=filled];
+157 [class=intent, fillcolor=lightblue, label="benefits of supply chain finance", shape=rect, style=filled];
+158 [class=intent, fillcolor=lightblue, label="what is the process for supply chain finance", shape=rect, style=filled];
+159 [class=intent, fillcolor=lightblue, label="SCF process details", shape=rect, style=filled];
+160 [class=intent, fillcolor=lightblue, label="SCF process details", shape=rect, style=filled];
+161 [class=intent, fillcolor=lightblue, label="Steps for invoice financing", shape=rect, style=filled];
+162 [class=intent, fillcolor=lightblue, label="explain process for SCF", shape=rect, style=filled];
+163 [class=intent, fillcolor=lightblue, label="empcash who can use", shape=rect, style=filled];
+164 [class=intent, fillcolor=lightblue, label="empcash funding limit", shape=rect, style=filled];
+165 [class=intent, fillcolor=lightblue, label="empcash processing costs", shape=rect, style=filled];
+166 [class=intent, fillcolor=lightblue, label="EmpCash and CIBIL", shape=rect, style=filled];
+167 [class=intent, fillcolor=lightblue, label="empcash processing time", shape=rect, style=filled];
+168 [class=intent, fillcolor=lightblue, label="empcash can I use multiple times", shape=rect, style=filled];
+169 [class=intent, fillcolor=lightblue, label="GigCash criteria", shape=rect, style=filled];
+170 [class=intent, fillcolor=lightblue, label="How much can I get with GigCash?", shape=rect, style=filled];
+171 [class=intent, fillcolor=lightblue, label="gigcash charges", shape=rect, style=filled];
+172 [class=intent, fillcolor=lightblue, label="GigCash and CIBIL", shape=rect, style=filled];
+173 [class=intent, fillcolor=lightblue, label="gigcash speed", shape=rect, style=filled];
+174 [class=intent, fillcolor=lightblue, label="GigCash for fluctuating earnings", shape=rect, style=filled];
+175 [class=intent, fillcolor=lightblue, label="ICF disbursement time", shape=rect, style=filled];
+176 [class=intent, fillcolor=lightblue, label="how is icf different from a regular loan", shape=rect, style=filled];
+177 [class=intent, fillcolor=lightblue, label="Is collateral required for ICF?", shape=rect, style=filled];
+178 [class=intent, fillcolor=lightblue, label="ICF application process", shape=rect, style=filled];
+179 [class=intent, fillcolor=lightblue, label="Will BillMart handle my insurance claim?", shape=rect, style=filled];
+180 [class=intent, fillcolor=lightblue, label="Is my hospital data safe with ICF?", shape=rect, style=filled];
+181 [class=intent, fillcolor=lightblue, label="What if insurance is delayed?", shape=rect, style=filled];
+182 [class=intent, fillcolor=lightblue, label="Is registration free?", shape=rect, style=filled];
+183 [class=intent, fillcolor=lightblue, label="Who can register on BillMart?", shape=rect, style=filled];
+184 [class=intent, fillcolor=lightblue, label="NACH benefits", shape=rect, style=filled];
+185 [class=intent, fillcolor=lightblue, label="Is my data safe?", shape=rect, style=filled];
+186 [class=intent, fillcolor=lightblue, label="Bill types for financing", shape=rect, style=filled];
+187 [class=intent, fillcolor=lightblue, label="Are there restrictions on bills?", shape=rect, style=filled];
+188 [class=intent, fillcolor=lightblue, label="Who sets the discount rate?", shape=rect, style=filled];
+189 [class=intent, fillcolor=lightblue, label="What is the maximum tenure?", shape=rect, style=filled];
+190 [class=intent, fillcolor=lightblue, label="What is a recourse transaction?", shape=rect, style=filled];
+191 [class=intent, fillcolor=lightblue, label="Deal note details", shape=rect, style=filled];
+192 [class=intent, fillcolor=lightblue, label="How do I make settlement payment?", shape=rect, style=filled];
+193 [class=intent, fillcolor=lightblue, label="Application status", shape=rect, style=filled];
+194 [class=intent, fillcolor=lightblue, label="Report an issue", shape=rect, style=filled];
+195 [class=intent, fillcolor=lightblue, label=goodbye, shape=rect, style=filled];
+196 [class=intent, fillcolor=lightblue, label="Am I eligible?", shape=rect, style=filled];
+197 [class=intent, fillcolor=lightblue, label="what is billmart", shape=rect, style=filled];
+198 [class=intent, fillcolor=lightblue, label="How does EmpCash work?", shape=rect, style=filled];
+199 [class=intent, fillcolor=lightblue, label="what is supply chain finance", shape=rect, style=filled];
+200 [class=intent, fillcolor=lightblue, label="/nlu_fallback", shape=rect, style=filled];
+201 [class=intent, fillcolor=lightblue, label="I need cash", shape=rect, style=filled];
+202 [class=intent, fillcolor=lightblue, label="how do i get this", shape=rect, style=filled];
+203 [class=intent, fillcolor=lightblue, label=company, shape=rect, style=filled];
+204 [class=intent, fillcolor=lightblue, label="i'm an independent contractor", shape=rect, style=filled];
+205 [class=intent, fillcolor=lightblue, label="I am an individual", shape=rect, style=filled];
+206 [class=intent, fillcolor=lightblue, label=investor, shape=rect, style=filled];
+207 [class=intent, fillcolor=lightblue, label="Freelancer loan", shape=rect, style=filled];
+208 [class=intent, fillcolor=lightblue, label="Is collateral required for SCF?", shape=rect, style=filled];
+209 [class=intent, fillcolor=lightblue, label="Who can apply?", shape=rect, style=filled];
+210 [class=intent, fillcolor=lightblue, label="what is billmart", shape=rect, style=filled];
+211 [class=intent, fillcolor=lightblue, label="customer support email", shape=rect, style=filled];
+212 [class=intent, fillcolor=lightblue, label=solutions, shape=rect, style=filled];
+213 [class=intent, fillcolor=lightblue, label="Documents required", shape=rect, style=filled];
+214 [class=intent, fillcolor=lightblue, label="see you", shape=rect, style=filled];
+215 [class=intent, fillcolor=lightblue, label="Appreciate your help", shape=rect, style=filled];
+216 [class=intent, fillcolor=lightblue, label=hello, shape=rect, style=filled];
+0 -> 79  [class="", key=NONE, label=""];
+0 -> 99  [class="", key=NONE, label=""];
+0 -> 121  [class="", key=0];
+0 -> 122  [class="", key=0];
+0 -> 123  [class="", key=0];
+0 -> 124  [class="", key=0];
+0 -> 125  [class="", key=0];
+0 -> 126  [class="", key=0];
+0 -> 127  [class="", key=0];
+0 -> 128  [class="", key=0];
+0 -> 129  [class="", key=0];
+0 -> 130  [class="", key=0];
+0 -> 131  [class="", key=0];
+0 -> 132  [class="", key=0];
+0 -> 133  [class="", key=0];
+0 -> 134  [class="", key=0];
+0 -> 135  [class="", key=0];
+0 -> 136  [class="", key=0];
+0 -> 137  [class="", key=0];
+0 -> 138  [class="", key=0];
+0 -> 139  [class="", key=0];
+0 -> 140  [class="", key=0];
+0 -> 141  [class="", key=0];
+0 -> 142  [class="", key=0];
+0 -> 143  [class="", key=0];
+0 -> 144  [class="", key=0];
+0 -> 145  [class="", key=0];
+0 -> 146  [class="", key=0];
+0 -> 147  [class="", key=0];
+0 -> 148  [class="", key=0];
+1 -> "-1"  [class="", key=NONE, label=""];
+1 -> 149  [class="", key=0];
+1 -> 150  [class="", key=0];
+4 -> 151  [class="", key=0];
+4 -> 152  [class="", key=0];
+4 -> 153  [class="", key=0];
+4 -> 154  [class="", key=0];
+7 -> 155  [class="", key=0];
+8 -> 156  [class="", key=0];
+9 -> 157  [class="", key=0];
+10 -> "-1"  [class="", key=NONE, label=""];
+11 -> "-1"  [class="", key=NONE, label=""];
+11 -> 158  [class="", key=0];
+13 -> "-1"  [class="", key=NONE, label=""];
+13 -> 159  [class="", key=0];
+15 -> "-1"  [class="", key=NONE, label=""];
+15 -> 160  [class="", key=0];
+17 -> "-1"  [class="", key=NONE, label=""];
+17 -> 161  [class="", key=0];
+19 -> "-1"  [class="", key=NONE, label=""];
+19 -> 162  [class="", key=0];
+21 -> 163  [class="", key=0];
+22 -> 164  [class="", key=0];
+23 -> 165  [class="", key=0];
+24 -> 166  [class="", key=0];
+25 -> 167  [class="", key=0];
+26 -> 168  [class="", key=0];
+27 -> "-1"  [class="", key=NONE, label=""];
+28 -> 169  [class="", key=0];
+29 -> 170  [class="", key=0];
+30 -> 171  [class="", key=0];
+31 -> 172  [class="", key=0];
+32 -> 173  [class="", key=0];
+33 -> 174  [class="", key=0];
+34 -> "-1"  [class="", key=NONE, label=""];
+35 -> 175  [class="", key=0];
+36 -> 176  [class="", key=0];
+37 -> 177  [class="", key=0];
+38 -> 178  [class="", key=0];
+39 -> 179  [class="", key=0];
+40 -> 180  [class="", key=0];
+41 -> 181  [class="", key=0];
+42 -> "-1"  [class="", key=NONE, label=""];
+43 -> "-1"  [class="", key=NONE, label=""];
+44 -> "-1"  [class="", key=NONE, label=""];
+45 -> "-1"  [class="", key=NONE, label=""];
+46 -> "-1"  [class="", key=NONE, label=""];
+47 -> 182  [class="", key=0];
+48 -> 183  [class="", key=0];
+49 -> "-1"  [class="", key=NONE, label=""];
+50 -> 184  [class="", key=0];
+51 -> 185  [class="", key=0];
+52 -> "-1"  [class="", key=NONE, label=""];
+53 -> 186  [class="", key=0];
+54 -> 187  [class="", key=0];
+55 -> 188  [class="", key=0];
+56 -> 189  [class="", key=0];
+57 -> 190  [class="", key=0];
+58 -> 191  [class="", key=0];
+59 -> "-1"  [class="", key=NONE, label=""];
+60 -> 192  [class="", key=0];
+61 -> "-1"  [class="", key=NONE, label=""];
+62 -> 193  [class="", key=0];
+63 -> 194  [class="", key=0];
+64 -> "-1"  [class="", key=NONE, label=""];
+66 -> "-1"  [class="", key=NONE, label=""];
+67 -> "-1"  [class="", key=NONE, label=""];
+68 -> 195  [class="", key=0];
+69 -> "-1"  [class="", key=NONE, label=""];
+75 -> 196  [class="", key=0];
+77 -> 197  [class="", key=0];
+78 -> "-1"  [class="", key=NONE, label=""];
+79 -> 198  [class="", key=0];
+79 -> 199  [class="", key=0];
+79 -> 200  [class="", key=0];
+79 -> 201  [class="", key=0];
+79 -> 202  [class="", key=0];
+79 -> 203  [class="", key=0];
+79 -> 204  [class="", key=0];
+79 -> 205  [class="", key=0];
+79 -> 206  [class="", key=0];
+79 -> 207  [class="", key=0];
+79 -> 208  [class="", key=0];
+79 -> 209  [class="", key=0];
+79 -> 210  [class="", key=0];
+79 -> 211  [class="", key=0];
+79 -> 212  [class="", key=0];
+79 -> 213  [class="", key=0];
+79 -> 214  [class="", key=0];
+79 -> 215  [class="", key=0];
+79 -> 216  [class="", key=0];
+84 -> "-1"  [class="", key=NONE, label=""];
+90 -> "-1"  [class="", key=NONE, label=""];
+92 -> "-1"  [class="", key=NONE, label=""];
+94 -> "-1"  [class="", key=NONE, label=""];
+98 -> "-1"  [class="", key=NONE, label=""];
+99 -> 100  [class="", key=NONE, label=""];
+100 -> 101  [class="", key=NONE, label=""];
+101 -> "-1"  [class="", key=NONE, label=""];
+121 -> 1  [class="", key=0];
+122 -> 1  [class="", key=0];
+123 -> 1  [class="", key=0];
+124 -> 1  [class="", key=0];
+125 -> 4  [class="", key=0];
+126 -> 4  [class="", key=0];
+127 -> 7  [class="", key=0];
+128 -> 11  [class="", key=0];
+129 -> 13  [class="", key=0];
+130 -> 15  [class="", key=0];
+131 -> 17  [class="", key=0];
+132 -> 19  [class="", key=0];
+133 -> 21  [class="", key=0];
+134 -> 28  [class="", key=0];
+135 -> 35  [class="", key=0];
+136 -> 43  [class="", key=0];
+137 -> 44  [class="", key=0];
+138 -> 45  [class="", key=0];
+139 -> 46  [class="", key=0];
+140 -> 47  [class="", key=0];
+141 -> 50  [class="", key=0];
+142 -> 53  [class="", key=0];
+143 -> 60  [class="", key=0];
+144 -> 62  [class="", key=0];
+145 -> 66  [class="", key=0];
+146 -> 67  [class="", key=0];
+147 -> 68  [class="", key=0];
+148 -> 77  [class="", key=0];
+149 -> 1  [class="", key=0];
+150 -> 1  [class="", key=0];
+151 -> 1  [class="", key=0];
+152 -> 1  [class="", key=0];
+153 -> 4  [class="", key=0];
+154 -> 75  [class="", key=0];
+155 -> 8  [class="", key=0];
+156 -> 9  [class="", key=0];
+157 -> 10  [class="", key=0];
+158 -> 11  [class="", key=0];
+159 -> 13  [class="", key=0];
+160 -> 15  [class="", key=0];
+161 -> 17  [class="", key=0];
+162 -> 19  [class="", key=0];
+163 -> 22  [class="", key=0];
+164 -> 23  [class="", key=0];
+165 -> 24  [class="", key=0];
+166 -> 25  [class="", key=0];
+167 -> 26  [class="", key=0];
+168 -> 27  [class="", key=0];
+169 -> 29  [class="", key=0];
+170 -> 30  [class="", key=0];
+171 -> 31  [class="", key=0];
+172 -> 32  [class="", key=0];
+173 -> 33  [class="", key=0];
+174 -> 34  [class="", key=0];
+175 -> 36  [class="", key=0];
+176 -> 37  [class="", key=0];
+177 -> 38  [class="", key=0];
+178 -> 39  [class="", key=0];
+179 -> 40  [class="", key=0];
+180 -> 41  [class="", key=0];
+181 -> 42  [class="", key=0];
+182 -> 48  [class="", key=0];
+183 -> 49  [class="", key=0];
+184 -> 51  [class="", key=0];
+185 -> 52  [class="", key=0];
+186 -> 54  [class="", key=0];
+187 -> 55  [class="", key=0];
+188 -> 56  [class="", key=0];
+189 -> 57  [class="", key=0];
+190 -> 58  [class="", key=0];
+191 -> 59  [class="", key=0];
+192 -> 61  [class="", key=0];
+193 -> 63  [class="", key=0];
+194 -> 64  [class="", key=0];
+195 -> 69  [class="", key=0];
+196 -> 66  [class="", key=0];
+197 -> 78  [class="", key=0];
+198 -> 1  [class="", key=0];
+199 -> 1  [class="", key=0];
+200 -> 1  [class="", key=0];
+201 -> 1  [class="", key=0];
+202 -> 1  [class="", key=0];
+203 -> 1  [class="", key=0];
+204 -> 1  [class="", key=0];
+205 -> 1  [class="", key=0];
+206 -> 1  [class="", key=0];
+207 -> 1  [class="", key=0];
+208 -> 84  [class="", key=0];
+209 -> 66  [class="", key=0];
+210 -> 78  [class="", key=0];
+211 -> 90  [class="", key=0];
+212 -> 92  [class="", key=0];
+213 -> 94  [class="", key=0];
+214 -> 69  [class="", key=0];
+215 -> 98  [class="", key=0];
+216 -> 100  [class="", key=0];
+}
+`;
+    drawGraph(graph);
+  } else {
+    serveGraph();
+  }
+
+
+</script>
+</body>
+</html>

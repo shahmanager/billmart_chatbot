@@ -1,0 +1,31 @@
+# endpoints.yml
+
+# Action Server (required for all custom actions)
+action_endpoint:
+  url: "http://localhost:5055/webhook"
+
+# REST channel (for API/chat widget integration)
+rest:
+  # No config needed for default REST
+
+# SocketIO channel (for webchat widgets like Botfront, Rasa Webchat, etc.)
+socketio:
+  user_message_evt: user_uttered
+  bot_message_evt: bot_uttered
+  session_persistence: true
+  # port: 5055  # (Do NOT set port here; port is set when you run Rasa server)
+
+# Tracker Store (optional, default is in-memory)
+# tracker_store:
+#   type: sql
+#   dialect: "sqlite"
+#   db: "rasa.db"
+#   username: ""
+#   password: ""
+#   host: "localhost"
+#   port: ""
+
+# Event Broker (optional, for advanced analytics/integration)
+# event_broker:
+#   type: "pika"
+#   url: "amqp://guest:guest@localhost:5672/"
