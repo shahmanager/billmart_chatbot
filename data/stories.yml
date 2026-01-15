@@ -1,0 +1,270 @@
+version: "3.1"
+
+stories:
+
+# ========== Minimal State Stories (Updated to match rules) ==========
+
+- story: User asks for loan and gets guided
+  steps:
+    - intent: ask_loan_need
+    - action: action_process_with_minimal_state
+    - intent: declare_gig_worker
+    - action: action_process_with_minimal_state
+    - intent: ask_process
+    - action: action_process_with_minimal_state
+
+- story: Business user journey
+  steps:
+    - intent: declare_business
+    - action: action_process_with_minimal_state
+    - intent: ask_supply_chain_finance
+    - action: action_process_with_minimal_state
+
+- story: Lender inquiry
+  steps:
+    - intent: declare_lender
+    - action: action_process_with_minimal_state
+    
+# ========== Supply Chain Finance (SCF) and Sub-Services ==========
+
+- story: ask about SCF and process
+  steps:
+    - intent: ask_supply_chain_finance
+    - action: action_process_with_minimal_state  # ← FIXED: Was utter_supply_chain_finance
+    - intent: ask_scf_process
+    - action: utter_scf_process
+    - intent: ask_scf_requirements
+    - action: utter_scf_requirements
+    - intent: ask_scf_benefits
+    - action: utter_scf_benefits
+
+- story: vendor finance flow
+  steps:
+    - intent: ask_vendor_finance
+    - action: utter_vendor_finance
+    - intent: ask_scf_process
+    - action: utter_vendor_finance
+
+- story: sales bill discounting flow
+  steps:
+    - intent: ask_sales_bill_discounting
+    - action: utter_sales_bill_discounting
+    - intent: ask_scf_process
+    - action: utter_sales_bill_discounting
+
+- story: purchase bill discounting flow
+  steps:
+    - intent: ask_purchase_bill_discounting
+    - action: utter_purchase_bill_discounting
+    - intent: ask_scf_process
+    - action: utter_purchase_bill_discounting
+
+- story: dealer finance flow
+  steps:
+    - intent: ask_dealer_finance
+    - action: utter_dealer_finance
+    - intent: ask_scf_process
+    - action: utter_dealer_finance
+
+- story: early payment finance flow
+  steps:
+    - intent: ask_early_payment_finance
+    - action: utter_early_payment_finance
+    - intent: ask_scf_process
+    - action: utter_early_payment_finance
+
+# ========== EmpCash (Salary Advance) ==========
+
+- story: empcash info and eligibility
+  steps:
+    - intent: ask_empcash_info
+    - action: action_process_with_minimal_state  # ← FIXED: Was utter_empcash_info
+    - intent: ask_empcash_eligibility
+    - action: utter_empcash_eligibility
+    - intent: ask_empcash_amount_limit
+    - action: utter_empcash_amount_limit
+    - intent: ask_empcash_fees
+    - action: utter_empcash_fees
+    - intent: ask_empcash_credit_impact
+    - action: utter_empcash_credit_impact
+    - intent: ask_empcash_speed
+    - action: utter_empcash_speed
+    - intent: ask_empcash_multiple_usage
+    - action: utter_empcash_multiple_usage
+
+# ========== GigCash (Gig Worker Advance) ==========
+
+- story: gigcash info and eligibility
+  steps:
+    - intent: ask_gigcash_info
+    - action: action_process_with_minimal_state  # ← FIXED: Was utter_gigcash_info
+    - intent: ask_gigcash_eligibility
+    - action: utter_gigcash_eligibility
+    - intent: ask_gigcash_funding_amount
+    - action: utter_gigcash_funding_amount
+    - intent: ask_gigcash_fees
+    - action: utter_gigcash_fees
+    - intent: ask_gigcash_credit_impact
+    - action: utter_gigcash_credit_impact
+    - intent: ask_gigcash_speed
+    - action: utter_gigcash_speed
+    - intent: ask_gigcash_irregular_income
+    - action: utter_gigcash_irregular_income
+
+# ========== Insurance Claim Finance (ICF) ==========
+
+- story: icf info and process
+  steps:
+    - intent: ask_insurance_claim_finance
+    - action: utter_insurance_claim_finance
+    - intent: ask_icf_speed
+    - action: utter_icf_speed
+    - intent: ask_icf_difference
+    - action: utter_icf_difference
+    - intent: ask_icf_collateral
+    - action: utter_icf_collateral
+    - intent: ask_icf_application
+    - action: utter_icf_application
+    - intent: ask_icf_claim_process
+    - action: utter_icf_claim_process
+    - intent: ask_icf_data_safety
+    - action: utter_icf_data_safety
+    - intent: ask_icf_delays
+    - action: utter_icf_delays
+
+# ========== Other Products ==========
+
+- story: lease rental discounting info
+  steps:
+    - intent: ask_lease_rental_discounting
+    - action: utter_lease_rental_discounting
+
+- story: term loan info
+  steps:
+    - intent: ask_term_loan
+    - action: utter_term_loan
+
+- story: short term loan info
+  steps:
+    - intent: ask_short_term_loan
+    - action: utter_short_term_loan
+
+- story: imark info
+  steps:
+    - intent: ask_imark_info
+    - action: utter_imark_info
+
+# ========== Registration, Platform, and FAQ ==========
+
+- story: registration and onboarding
+  steps:
+    - intent: ask_registration_process
+    - action: utter_registration_process
+    - intent: ask_registration_charges
+    - action: utter_registration_charges
+    - intent: ask_who_can_register
+    - action: utter_who_can_register
+
+- story: nach mandate and data security
+  steps:
+    - intent: ask_nach_mandate
+    - action: utter_nach_mandate
+    - intent: ask_nach_benefits
+    - action: utter_nach_benefits
+    - intent: ask_data_security
+    - action: utter_data_security
+
+- story: transaction and bill queries
+  steps:
+    - intent: ask_supported_transactions
+    - action: utter_supported_transactions
+    - intent: ask_bill_types
+    - action: utter_bill_types
+    - intent: ask_bill_restrictions
+    - action: utter_bill_restrictions
+    - intent: ask_discounting_percentage
+    - action: utter_discounting_percentage
+    - intent: ask_maximum_tenure
+    - action: utter_maximum_tenure
+    - intent: ask_recourse_transaction
+    - action: utter_recourse_transaction
+    - intent: ask_deal_note
+    - action: utter_deal_note
+
+- story: fund crediting and settlement
+  steps:
+    - intent: ask_fund_crediting
+    - action: utter_fund_crediting
+    - intent: ask_settlement_payment
+    - action: utter_settlement_payment
+
+- story: contact info and complaints
+  steps:
+    - intent: ask_contact_info
+    - action: utter_contact_info
+    - intent: ask_status
+    - action: utter_status
+    - intent: file_complaint
+    - action: utter_file_complaint
+
+# ========== General and Contextual Flows ==========
+
+- story: smart process inquiry
+  steps:
+    - intent: ask_process
+    - action: action_process_with_minimal_state  # ← FIXED: Was action_provide_process_info
+
+- story: smart eligibility check
+  steps:
+    - intent: ask_eligibility
+    - action: action_provide_eligibility_info
+
+# ========== Demo Requests ==========
+
+- story: context aware demo request
+  steps:
+    - intent: request_demo
+    - action: action_smart_demo
+
+# ========== Thank you and Goodbye ==========
+
+- story: thank you and goodbye
+  steps:
+    - intent: thank_you
+    - action: utter_thank_you
+    - intent: goodbye
+    - action: utter_goodbye
+
+# ========== Fallback ==========
+
+- story: fallback default
+  steps:
+    - intent: nlu_fallback
+    - action: action_process_with_minimal_state  # ← FIXED: Was utter_default
+
+# ========== Additional Context-Aware Flows ==========
+
+- story: individual user complete journey
+  steps:
+    - intent: declare_individual_borrower
+    - action: action_process_with_minimal_state
+    - intent: ask_gigcash_info
+    - action: action_process_with_minimal_state
+    - intent: ask_process
+    - action: action_process_with_minimal_state
+
+- story: business scf complete journey
+  steps:
+    - intent: declare_business
+    - action: action_process_with_minimal_state
+    - intent: ask_supply_chain_finance
+    - action: action_process_with_minimal_state
+    - intent: ask_eligibility
+    - action: action_provide_eligibility_info
+
+- story: lender complete journey
+  steps:
+    - intent: declare_lender
+    - action: action_process_with_minimal_state
+    - intent: ask_company_info
+    - action: utter_company_info

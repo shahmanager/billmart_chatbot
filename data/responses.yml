@@ -1,0 +1,475 @@
+version: "3.1"
+
+responses:
+
+
+  utter_greet:
+    - text: |
+        Hi there! 👋 Welcome to **BillMart FinTech** - India's leading digital lending marketplace!
+        
+        🏆 We've disbursed ₹2,500+ crores and helped 23,000+ businesses with their financing needs.
+        
+        We serve:
+        👥 **Individuals** - Salary advances (EmpCash) & gig worker funding (GigCash)
+        🏢 **Businesses** - Supply chain finance, term loans, working capital
+        💼 **Lenders** - Investment opportunities in verified deals
+        
+        How can I help you today?
+
+  utter_services_brief:
+    - text: |
+        📋 **Quick Help Options:**
+        
+        💰 **Need a loan?** → I can guide you to the right product
+        📞 **Contact info?** → Get our office details
+        📊 **Learn about us?** → Company information
+        🎯 **Specific product?** → Ask about EmpCash, GigCash, SCF, etc.
+        
+        Just type what you need or ask me anything!
+
+  utter_company_info:
+    - text: |
+        BillMart FinTech is India's leading digital lending marketplace, founded in 2021. 
+        - Over ₹2,500 crores disbursed, 23,000+ invoices processed, 40+ financers onboarded.
+        - 🏆 Winner: Dominant LendTech of the Year Award (2024)
+        - 📊 Official digital funding partner for CMAI
+        - Offices: Mumbai & Delhi | ISO 27001 & SOC2 certified.
+        Our leadership: Ashok Mittal (MD & CEO), Sandeep Doshi (COO), Jainam Vora (CTO), S. Ravi (Chairman).
+        What would you like to know about our services?
+
+  utter_services_offered:
+    - text: |
+        We have solutions for everyone:
+        For individuals:
+        💰 EmpCash – Salary advance up to 50% (employer partnered)
+        🎯 GigCash – For freelancers/gig workers
+        For businesses:
+        🔗 Supply Chain Finance (SCF): Vendor, Dealer, Sales/Purchase Bill Discounting, Early Payment
+        🏥 Insurance Claim Finance – For hospitals
+        🏠 Lease Rental Discounting
+        📊 iMARK – AI credit rating for MSMEs
+        Plus: Term/Short-term loans, working capital, and more.
+        Which solution interests you most?
+
+  utter_documents:
+    - text: |
+        The documents depend on your product:
+        - EmpCash: Last 3 payslips, 3 months bank statements, Aadhaar, PAN, employer registered with us.
+        - GigCash: Platform earnings screenshots, bank statements, Aadhaar, PAN.
+        - Business: GST registration, 6 months bank statements, invoices (≤3 months old), business registration docs.
+        Everything is digital—no physical paperwork needed! Want to check specific documents for your case?
+
+  utter_unemployed_support:
+    - text: |
+        I understand your situation. Are you doing any gig work, have pending payments, or thinking of starting a business?
+        If you have gig income, GigCash might work for you. Or I can connect you with a partner for personal loans.
+        Would you like to speak with an advisor?
+
+  utter_process:
+    - text: |
+        Here’s our simple process:
+        1. Register & KYC online
+        2. Upload docs; AI verifies instantly
+        3. Multiple financers bid; pick best offer
+        4. Money to your account (2h for EmpCash, 24-48h for ICF)
+        100% digital, no paperwork.
+
+  utter_demo:
+    - text: |
+        Absolutely! I’ll connect you with our team.
+        ✅ Instant eligibility check
+        ✅ Product walkthrough
+        ✅ Documents required
+        ✅ Rate comparison
+        ✅ Timeline & next steps
+        Call +91 93269 46663 or email care@billmart.com, or say "schedule callback" for a call in 15 minutes.
+
+  utter_empcash_info:
+    - text: |
+        💰 EmpCash – For salaried employees.
+        • Up to 50% of salary, instant approval (2h)
+        • Auto-repay from next paycheck
+        • No hidden fees
+        Would you like to know about eligibility, documents, or connect with our team?
+
+  utter_empcash_eligibility:
+    - text: |
+        EmpCash eligibility:
+        👔 Salaried employee at a BillMart partner company
+        🏢 Meet employer’s criteria
+        ⏰ 3+ months employment preferred
+        Want to check if your company is registered?
+
+  utter_empcash_amount_limit:
+    - text: |
+        Typically up to 50% of earned salary, depending on employer policy.
+        E.g. ₹50,000 salary → ₹25,000 advance.
+        You can use EmpCash multiple times within your limit.
+
+  utter_empcash_fees:
+    - text: |
+        EmpCash charges a small, transparent processing fee and fair interest rate. All costs are shown upfront.
+
+  utter_empcash_credit_impact:
+    - text: |
+        Repayment behavior with EmpCash can impact your credit score. Timely auto-repayment helps your credit history.
+
+  utter_empcash_speed:
+    - text: |
+        Once approved, funds are transferred instantly or within a few hours.
+
+  utter_empcash_multiple_usage:
+    - text: |
+        Yes, you can use EmpCash multiple times within your approved limit in a month.
+
+  utter_gigcash_info:
+    - text: |
+        🎯 GigCash – For gig workers/freelancers:
+        • Up to 50% of monthly earnings
+        • Based on verified platform history
+        • No traditional credit checks
+        • Auto-repay from gig earnings
+
+        Up to 50% of average monthly gig earnings, calculated from last 3-6 months.
+        We can combine multiple platforms for higher eligibility.
+
+        GigCash eligibility:
+        🚗 Uber/Ola drivers, 🍕 Zomato/Swiggy partners, 💻 freelancers, etc.
+        ✅ 3+ months on platform, consistent earnings, KYC.
+        Which platforms do you work with?
+
+        
+
+  utter_gigcash_eligibility:
+    - text: |
+        GigCash eligibility:
+        🚗 Uber/Ola drivers, 🍕 Zomato/Swiggy partners, 💻 freelancers, etc.
+        ✅ 3+ months on platform, consistent earnings, KYC.
+        Which platforms do you work with?
+
+  utter_gigcash_funding_amount:
+    - text: |
+        Up to 50% of average monthly gig earnings, calculated from last 3-6 months.
+        We can combine multiple platforms for higher eligibility.
+
+  utter_gigcash_fees:
+    - text: |
+        GigCash has a clear, upfront interest rate and minimal processing fee. All charges shown before you confirm.
+
+  utter_gigcash_credit_impact:
+    - text: |
+        Repayment history with GigCash can affect your credit score. Consistent repayments build positive credit.
+
+  utter_gigcash_speed:
+    - text: |
+        After connecting your gig platform and approval, funds are usually transferred within minutes.
+
+  utter_gigcash_irregular_income:
+    - text: |
+        GigCash is built for fluctuating incomes. Our AI looks at your long-term earning pattern for eligibility.
+
+  utter_supply_chain_finance:
+    - text: |
+        Supply Chain Finance (B-SCF) by BillMart offers businesses a seamless way to manage cash 
+        flow and optimize working capital through short-term Finance. This solution ensures that suppliers and 
+        distributors are supported financially, enabling uninterrupted operations and strengthened supplier 
+        relationships. 
+        How Supply Chain Finance Works: 
+
+        01. Anchor Evaluation & Onboarding 
+        Anchor is evaluated by Financer as per their own BRE and is approved by Financer on the basis of their 
+        assessment. 
+
+        02. Dealers/Vendors Evaluation & Onboarding 
+        Dealers/Vendors of the Anchor are evaluated by Financer as per their own BRE and are approved by 
+        Financer on the basis of their assessment. 
+        03. Limit Setup for the Anchor 
+
+        As per the financial health and risk assessment of the Anchor, a overall credit limit is sanctioned by the 
+        Financer and accepted by the Anchor. 
+        04. Pair Limit of Anchor & Dealer/Vendor 
+
+        As per the financial health and risk assessment of the Dealer/Vendor and transaction history between 
+        Anchor & Dealer/Vendor, pair limit of both the parties is sanctioned by the Financer and accepted by 
+        both entity. 
+
+        05. Initiate Transaction 
+        Either party initiate the transaction on the platform by uploading the invoice. These invoices serve as 
+        the basis for financing and include supporting documents and data required by financer. 
+        06. Invoice Verification & Approval 
+
+        GST and compliance checks are done for the transaction through platform. Further the counterparty 
+        reviews and accepts the invoice for the financing agreeing to trade or financial obligation in the 
+        transaction. 
+
+        07. Disbursement 
+        Financers approves the verified invoices and disburse funds directly to the supplier, after deducting 
+        upfront interest. This ensures timely payments to suppliers. 
+        08. Repayment 
+
+        The buyer makes the repayment to the Financer for the full invoice amount as per the agreed terms 
+        completing the financing cycle.
+      
+
+  utter_scf_process:
+    - text: |
+        SCF process:
+        1. Upload invoice
+        2. GST compliance check
+        3. Counterparty approval
+        4. Financer bidding
+        5. Instant disbursement
+        All digital, T+1/T+2 funding.
+
+  utter_scf_requirements:
+    - text: |
+        SCF requirements:
+        • GST-registered business
+        • Valid GST invoices ≤3 months old
+        • Minimum amount: ₹50,000
+
+  utter_scf_benefits:
+    - text: |
+        SCF benefits:
+        • Unlock working capital
+        • Improve supplier relationships
+        • Collateral-free, flexible, competitive rates
+
+  utter_sales_bill_discounting:
+    - text: |
+        Sales Bill Discounting initiated by MSMEs (sellers) enables faster payment cycles by allowing 
+        them to sell their receivables (invoices) to a financial institution at a discounted rate. This helps MSMEs 
+        receive immediate cash instead of waiting for payment from large buyers (anchors), who typically take 
+        longer payment terms (e.g., 30, 60, or 90 days). The seller bears the associated costs. This solution 
+        enhances cash flow for MSMEs, providing quick liquidity while streamlining the payment process. 
+
+  utter_purchase_bill_discounting:
+    - text: |
+        Purchase Bill Discounting: Enables buyers to pay suppliers early. Financer pays supplier; buyer repays on due date. Optimizes working capital.
+
+  utter_vendor_finance:
+    - text: |
+        Vendor Finance: Financial support for your suppliers, ensuring a healthy and stable supply chain.
+        Vendor Finance is a finance solution where suppliers (vendors) offer unsecured funding to 
+        buyers (often through a lender-approved program) to help them purchase goods or 
+        services without immediate full payment. In this arrangement, the supplier acts as the 
+        borrower, supported by trade confirmations from the buyer (Anchor), who may or may not 
+        provide a guarantee. This enables suppliers to access credit lines, deferred payment 
+        plans, or loans, facilitating smoother business-to-business (B2B) transactions while 
+        improving cash flow and enabling buyers to make purchases on favourable terms.
+
+  utter_dealer_finance:
+    - text: |
+        Dealer Finance: Support for your dealer network to manage inventory and sales, boosting your business.
+        Dealer Finance provides unsecured financing to dealers, enabling them to procure goods from 
+        Anchors (suppliers) without immediate full payment. In this arrangement, dealers act as borrowers, and 
+        the Anchor may optionally serve as a guarantor, depending on the terms of the financing. This solution 
+        supports dealers, such as those selling cars or machinery, by offering flexible payment options—either 
+        through in-house financing or third-party lenders—helping them secure inventory and meet customer 
+        demand while managing their cash flow. 
+  utter_early_payment_finance:
+    - text: |
+        Early Payment Finance: Accelerates payments in your supply chain, optimizing working capital for you and your partners.
+        Early Payment Finance is a supply chain finance program offered by the 
+        Anchor/Distributor/Seller to encourage their retailers/buyers to pay their invoices ahead of 
+        the due date. Also known as Early Payment Discount, this program incentivizes buyers to 
+        settle invoices before their due date in exchange for attractive discounts. 
+
+  utter_lease_rental_discounting:
+    - text: |
+        Lease Rental Discounting (LRD): Unlock future rental income for immediate funds. For property owners with lease agreements.
+
+  utter_term_loan:
+    - text: |
+        Term Loan: Long-term financing for business expansion, capex, or projects. Competitive rates via our partner financers.
+
+  utter_short_term_loan:
+    - text: |
+        Short Term Loan: Quick financing for immediate needs (e.g., inventory, operations). Flexible repayment.
+
+  utter_imark_info:
+    - text: |
+        iMARK is BillMart’s AI-powered credit grading solution designed specifically for MSMEs, providing 
+        reliable, actionable insights into creditworthiness. With iMARK, businesses can make informed 
+        decisions, improve access to financing, and reduce financial risks. The solution combines advanced data 
+        analysis with tailored methodologies, offering businesses a comprehensive, fair, and relevant credit 
+        grading. 
+        How iMARK Works: 
+        iMARK is a paperless, digital credit grading tool that evaluates a business's creditworthiness through 
+        both quantitative and qualitative assessments. The process involves: 
+        01. Submission of Documents 
+        Businesses submit financial statements and operational data. 
+        02. Initial Review 
+        iMARK ensures completeness and identifies key focus areas. 
+        03. Detailed Financial Analysis 
+        A thorough evaluation of profitability, liquidity, debt coverage, cash flow and many more parameters. 
+        04. Grading Assessment 
+        The business receives a credit grading based on the evaluation. 
+        05. Grading Dissemination 
+        The final grading is shared with the business and published with consent for stakeholders like banks 
+        and investors.
+
+  utter_insurance_claim_finance:
+    - text: |
+        🏥 Insurance Claim Finance (ICF) – For hospitals:
+        • Fast cash against pending insurance claims
+        • No collateral required
+        • Flexible repayment aligned with claim settlement
+        • Digital application, quick approval
+
+        ICF helps hospitals manage cash flow while waiting for insurance payouts. Want to know more about the process or benefits?
+        
+
+  utter_icf_speed:
+    - text: |
+        ICF funds disbursed within 24-48 hours after claim verification.
+
+  utter_icf_difference:
+    - text: |
+        Unlike a standard loan, ICF is tied to insurance claims and offers flexible repayment aligned with claim settlement.
+
+  utter_icf_collateral:
+    - text: |
+        No collateral required. ICF is unsecured financing for hospitals.
+
+  utter_icf_application:
+    - text: |
+        Simple digital application: submit claim details on our platform, get fast approval and funds.
+
+  utter_icf_claim_process:
+    - text: |
+        BillMart does not interfere with your insurance claim process. We bridge the gap while you wait for payout.
+
+  utter_icf_data_safety:
+    - text: |
+        All hospital data is protected with advanced encryption. We are ISO 27001 certified.
+
+  utter_icf_delays:
+    - text: |
+        If insurance is delayed or partial, we offer flexible repayment to ensure your hospital is not burdened.
+
+  utter_registration_process:
+    - text: |
+        Registering is fully digital: KYC, GSTIN, CIN, bank details, MSME registration, authorization docs. Takes ~2 business days.
+
+  utter_registration_charges:
+    - text: |
+        Registration, documentation, annual, and transaction charges are all FREE on BillMart.
+
+  utter_who_can_register:
+    - text: |
+        Any business entity. The authorized person must digitally sign documents (Digital Signature or Aadhaar eSign).
+
+  utter_nach_mandate:
+    - text: |
+        NACH mandate: Bank authorization for secure settlement payments. May be required for some products.
+
+  utter_nach_benefits:
+    - text: |
+        NACH increases trust, credit limits, and lowers your financing costs by attracting more financers.
+
+  utter_data_security:
+    - text: |
+        Your data is protected by ISO 27001/SOC2 standards. Shared only with your consent for credit evaluation.
+
+  utter_supported_transactions:
+    - text: |
+        Supported: Invoice Financing, Bill Discounting, Supply Chain Financing, and more.
+
+  utter_bill_types:
+    - text: |
+        Any valid GST Bill/Invoice for goods/services, not older than 3 months, over ₹50,000.
+
+  utter_bill_restrictions:
+    - text: |
+        GST bills must be ≤3 months old and >₹50,000 for financing.
+
+  utter_discounting_percentage:
+    - text: |
+        Businesses set the max discount percentage, or let financers bid and choose the best offer.
+
+  utter_maximum_tenure:
+    - text: |
+        Maximum tenure for bill discounting is 180 days.
+
+  utter_recourse_transaction:
+    - text: |
+        "With recourse" means you guarantee payment to financer if your customer defaults.
+
+  utter_deal_note:
+    - text: |
+        Deal Note: Legally binding document with all transaction details (amount, cost, settlement, recourse).
+
+  utter_fund_crediting:
+    - text: |
+        Funds are credited on T+1/T+2 basis (1-2 business days after approval).
+
+  utter_settlement_payment:
+    - text: |
+        Make settlement payment to the specified escrow account by the cut-off time in your Deal Note.
+
+  utter_contact_info:
+    - text: |
+        📞 +91 93269 46663 | ✉️ care@billmart.com
+        Mumbai HQ: 1102, K.P Aurum, Marol Naka, Andheri East, Mumbai 400059
+        Delhi: MSME House, C-9/9848, Vasant Kunj, New Delhi 110070
+
+  utter_status:
+    - text: |
+        Check your application status on the BillMart portal or contact support with your application ID.
+
+  utter_file_complaint:
+    - text: |
+        File a complaint by emailing care@billmart.com with subject 'Complaint' and your application details.
+
+  utter_loan_need:
+    - text: |
+        I can help! Are you a salaried employee, gig worker, or business owner?
+
+  utter_urgent_money:
+    - text: |
+        Let's find the fastest solution. Are you a salaried employee, gig worker, or business owner?
+
+  utter_business_loan:
+    - text: |
+        Are you looking for working capital, invoice financing, or something else?
+
+  utter_capital_need:
+    - text: |
+        For working capital, SCF is popular: get cash from unpaid invoices. Does that fit your need?
+
+  utter_startup_funding:
+    - text: |
+        We focus on businesses with revenue, but can connect you to partners for startup funding. Want an intro?
+
+  utter_thank_you:
+    - text: |
+        You're welcome! Anything else I can help with?
+
+  utter_platform_benefits:
+    - text: |
+        Our platform offers quick funds, competitive rates, digital processing, deep data insights, and access to 40+ financers.
+
+  utter_competitive_advantage:
+    - text: |
+        Our edge: 40+ financers for competitive rates, transparent no-hidden-fee model, and secure AI-driven tech.
+
+  utter_goodbye:
+    - text: |
+        Thanks for chatting with BillMart! Call +91 93269 46663 or email care@billmart.com anytime. Have an amazing day! 🚀
+
+  utter_default:
+    - text: |
+        I want to give you the right info! I can help with:
+        💰 Personal/gig financing
+        🏢 Business solutions
+        🏥 Hospital financing
+        📊 Credit rating
+        📋 Application process
+        What do you want to know?
+
+  utter_ask_user_type:
+    - text: "To help you better, let me understand your situation: Are you an **individual**, **business**, or **lender**? Tell me about your work situation for best options."
+
+  utter_ask_product_name:
+    - text: "Which product interests you: EmpCash, GigCash, Supply Chain Finance, Insurance Claim Finance, or Term Loan?"

@@ -1,0 +1,716 @@
+[
+  {
+    "user_id": "test_user_123",
+    "timestamp": "2025-06-02T12:30:57.604299",
+    "user_message": "I want a demo",
+    "conversation_history": [
+      {
+        "type": "user",
+        "original": "What is BillMart?",
+        "english": "What is BillMart?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:30:57.403242"
+      },
+      {
+        "type": "bot",
+        "english": "Digital marketplace connecting borrowers with financers",
+        "translated": "Digital marketplace connecting borrowers with financers",
+        "language": "english",
+        "timestamp": "2025-06-02T12:30:57.403242"
+      },
+      {
+        "type": "user",
+        "original": "Tell me about EmpCash",
+        "english": "Tell me about EmpCash",
+        "language": "english",
+        "timestamp": "2025-06-02T12:30:57.433421"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's products and services including Supply Chain Finance, EmpCash, GigCash, company information, and registration process. What would you like to know?",
+        "translated": "I can help you with BillMart's products and services including Supply Chain Finance, EmpCash, GigCash, company information, and registration process. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:30:57.433421"
+      },
+      {
+        "type": "user",
+        "original": "What is supply chain finance?",
+        "english": "What is supply chain finance?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:30:57.492207"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's products and services including Supply Chain Finance, EmpCash, GigCash, company information, and registration process. What would you like to know?",
+        "translated": "I can help you with BillMart's products and services including Supply Chain Finance, EmpCash, GigCash, company information, and registration process. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:30:57.492207"
+      },
+      {
+        "type": "user",
+        "original": "How do I contact you?",
+        "english": "How do I contact you?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:30:57.567025"
+      },
+      {
+        "type": "bot",
+        "english": "EmpCash process: Login → KYC → Apply for advance → Instant approval → Receive funds → Auto-repayment from paycheck.",
+        "translated": "EmpCash process: Login → KYC → Apply for advance → Instant approval → Receive funds → Auto-repayment from paycheck.",
+        "language": "english",
+        "timestamp": "2025-06-02T12:30:57.567025"
+      },
+      {
+        "type": "user",
+        "original": "I want a demo",
+        "english": "I want a demo",
+        "language": "english",
+        "timestamp": "2025-06-02T12:30:57.604299"
+      }
+    ]
+  },
+  {
+    "user_id": "test_user_123",
+    "timestamp": "2025-06-02T12:40:10.250717",
+    "user_message": "I want a demo",
+    "conversation_history": [
+      {
+        "type": "user",
+        "original": "What is BillMart?",
+        "english": "What is BillMart?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:40:10.098296"
+      },
+      {
+        "type": "bot",
+        "english": "Digital marketplace connecting borrowers with multiple financers - NOT a direct lender",
+        "translated": "Digital marketplace connecting borrowers with multiple financers - NOT a direct lender",
+        "language": "english",
+        "timestamp": "2025-06-02T12:40:10.098296"
+      },
+      {
+        "type": "user",
+        "original": "Tell me about EmpCash",
+        "english": "Tell me about EmpCash",
+        "language": "english",
+        "timestamp": "2025-06-02T12:40:10.127296"
+      },
+      {
+        "type": "bot",
+        "english": "Salary advance solution for employees to access earnings before payday. Target: Salaried employees whose employers partner with BillMart, Limit: Up to 50% of earned salary (typically), varies by employer policy",
+        "translated": "Salary advance solution for employees to access earnings before payday. Target: Salaried employees whose employers partner with BillMart, Limit: Up to 50% of earned salary (typically), varies by employer policy",
+        "language": "english",
+        "timestamp": "2025-06-02T12:40:10.127296"
+      },
+      {
+        "type": "user",
+        "original": "What is supply chain finance?",
+        "english": "What is supply chain finance?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:40:10.146518"
+      },
+      {
+        "type": "bot",
+        "english": "Short-term financing solutions for supply chain covering vendor financing, purchase invoice discounting, invoice financing, dealer financing. Minimum: Rs. 50,000, Requirements: GST bills not older than 3 months",
+        "translated": "Short-term financing solutions for supply chain covering vendor financing, purchase invoice discounting, invoice financing, dealer financing. Minimum: Rs. 50,000, Requirements: GST bills not older than 3 months",
+        "language": "english",
+        "timestamp": "2025-06-02T12:40:10.146518"
+      },
+      {
+        "type": "user",
+        "original": "How do I contact you?",
+        "english": "How do I contact you?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:40:10.204004"
+      },
+      {
+        "type": "bot",
+        "english": "EmpCash process: Login → KYC → Apply for advance → Instant approval → Receive funds → Auto-repayment from paycheck.",
+        "translated": "EmpCash process: Login → KYC → Apply for advance → Instant approval → Receive funds → Auto-repayment from paycheck.",
+        "language": "english",
+        "timestamp": "2025-06-02T12:40:10.204004"
+      },
+      {
+        "type": "user",
+        "original": "I want a demo",
+        "english": "I want a demo",
+        "language": "english",
+        "timestamp": "2025-06-02T12:40:10.250717"
+      }
+    ]
+  },
+  {
+    "user_id": "test_user_123",
+    "timestamp": "2025-06-02T12:46:38.618796",
+    "user_message": "I want a demo",
+    "conversation_history": [
+      {
+        "type": "user",
+        "original": "What is BillMart?",
+        "english": "What is BillMart?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:46:38.451680"
+      },
+      {
+        "type": "bot",
+        "english": "Digital marketplace connecting borrowers with financers",
+        "translated": "Digital marketplace connecting borrowers with financers",
+        "language": "english",
+        "timestamp": "2025-06-02T12:46:38.451680"
+      },
+      {
+        "type": "user",
+        "original": "Tell me about EmpCash",
+        "english": "Tell me about EmpCash",
+        "language": "english",
+        "timestamp": "2025-06-02T12:46:38.485024"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's products and services including Supply Chain Finance, EmpCash, GigCash, company information, and registration process. What would you like to know?",
+        "translated": "I can help you with BillMart's products and services including Supply Chain Finance, EmpCash, GigCash, company information, and registration process. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:46:38.485024"
+      },
+      {
+        "type": "user",
+        "original": "What is supply chain finance?",
+        "english": "What is supply chain finance?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:46:38.496585"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's products and services including Supply Chain Finance, EmpCash, GigCash, company information, and registration process. What would you like to know?",
+        "translated": "I can help you with BillMart's products and services including Supply Chain Finance, EmpCash, GigCash, company information, and registration process. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:46:38.497595"
+      },
+      {
+        "type": "user",
+        "original": "How do I contact you?",
+        "english": "How do I contact you?",
+        "language": "english",
+        "timestamp": "2025-06-02T12:46:38.568615"
+      },
+      {
+        "type": "bot",
+        "english": "EmpCash process: Login → KYC → Apply for advance → Instant approval → Receive funds → Auto-repayment from paycheck.",
+        "translated": "EmpCash process: Login → KYC → Apply for advance → Instant approval → Receive funds → Auto-repayment from paycheck.",
+        "language": "english",
+        "timestamp": "2025-06-02T12:46:38.568615"
+      },
+      {
+        "type": "user",
+        "original": "I want a demo",
+        "english": "I want a demo",
+        "language": "english",
+        "timestamp": "2025-06-02T12:46:38.618796"
+      }
+    ]
+  },
+  {
+    "user_id": "test_user_123",
+    "timestamp": "2025-06-02T13:20:34.317705",
+    "user_message": "I want a demo",
+    "conversation_history": [
+      {
+        "type": "user",
+        "original": "What is BillMart?",
+        "english": "What is BillMart?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.088218"
+      },
+      {
+        "type": "bot",
+        "english": "BillMart FinTech is a cutting-edge digital lending platform founded in 2021, connecting businesses and financiers to meet liquidity needs for Corporates and MSMEs. We have disbursed more than Rs 1250 crores in the last 16 months.",
+        "translated": "BillMart FinTech is a cutting-edge digital lending platform founded in 2021, connecting businesses and financiers to meet liquidity needs for Corporates and MSMEs. We have disbursed more than Rs 1250 crores in the last 16 months.",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.088218"
+      },
+      {
+        "type": "user",
+        "original": "Tell me about EmpCash",
+        "english": "Tell me about EmpCash",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.106234"
+      },
+      {
+        "type": "bot",
+        "english": "BillMart EmpCash (Employee Cash) is a salary advance solution designed to help employees access their earnings before payday. Whether you have an urgent expense, a medical emergency, or just need some extra funds to cover unexpected costs, EmpCash provides a quick and hassle-free way to get your salary when you need it the most.. Target: Salaried employees whose employers partner with BillMart, Limit: Up to 50% of earned salary (typically), varies by employer policy",
+        "translated": "BillMart EmpCash (Employee Cash) is a salary advance solution designed to help employees access their earnings before payday. Whether you have an urgent expense, a medical emergency, or just need some extra funds to cover unexpected costs, EmpCash provides a quick and hassle-free way to get your salary when you need it the most.. Target: Salaried employees whose employers partner with BillMart, Limit: Up to 50% of earned salary (typically), varies by employer policy",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.106234"
+      },
+      {
+        "type": "user",
+        "original": "What is supply chain finance?",
+        "english": "What is supply chain finance?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.123320"
+      },
+      {
+        "type": "bot",
+        "english": "Avail Short Term Financing Solutions for Supply Chain Covering Vendor Financing, Purchase Invoice Discounting, Invoice Financing, Dealer Financing and More. Minimum: Rs. 50,000, Requirements: GST bills not older than 3 months",
+        "translated": "Avail Short Term Financing Solutions for Supply Chain Covering Vendor Financing, Purchase Invoice Discounting, Invoice Financing, Dealer Financing and More. Minimum: Rs. 50,000, Requirements: GST bills not older than 3 months",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.125329"
+      },
+      {
+        "type": "user",
+        "original": "How do I contact you?",
+        "english": "How do I contact you?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.173005"
+      },
+      {
+        "type": "bot",
+        "english": "EmpCash process: Login → KYC → Apply for advance → Instant approval → Receive funds → Auto-repayment from paycheck.",
+        "translated": "EmpCash process: Login → KYC → Apply for advance → Instant approval → Receive funds → Auto-repayment from paycheck.",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.173005"
+      },
+      {
+        "type": "user",
+        "original": "What are your charges?",
+        "english": "What are your charges?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.202586"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "translated": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.202586"
+      },
+      {
+        "type": "user",
+        "original": "Tell me about registration",
+        "english": "Tell me about registration",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.248239"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "translated": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.248239"
+      },
+      {
+        "type": "user",
+        "original": "What is GigCash?",
+        "english": "What is GigCash?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.252315"
+      },
+      {
+        "type": "bot",
+        "english": "In today's fast-moving gig economy, freelancers, contract workers, and independent professionals often face irregular income flows. BillMart GigCash is designed to provide quick and hassle-free financial support, ensuring that gig workers have access to funds whenever they need them. Whether it's to cover urgent expenses, invest in new opportunities, or bridge the gap between payouts, GigCash offers instant, flexible financial assistance tailored for gig professionals.. Target: Freelancers, contract workers, independent professionals, gig workers earning through partner platforms, Limit: Up to 50% of estimated monthly earnings based on past earnings, work history, and income stability",
+        "translated": "In today's fast-moving gig economy, freelancers, contract workers, and independent professionals often face irregular income flows. BillMart GigCash is designed to provide quick and hassle-free financial support, ensuring that gig workers have access to funds whenever they need them. Whether it's to cover urgent expenses, invest in new opportunities, or bridge the gap between payouts, GigCash offers instant, flexible financial assistance tailored for gig professionals.. Target: Freelancers, contract workers, independent professionals, gig workers earning through partner platforms, Limit: Up to 50% of estimated monthly earnings based on past earnings, work history, and income stability",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.252315"
+      },
+      {
+        "type": "user",
+        "original": "How much can I borrow?",
+        "english": "How much can I borrow?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.264496"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "translated": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.264496"
+      },
+      {
+        "type": "user",
+        "original": "I want a demo",
+        "english": "I want a demo",
+        "language": "english",
+        "timestamp": "2025-06-02T13:20:34.317705"
+      }
+    ]
+  },
+  {
+    "user_id": "test_user_123",
+    "timestamp": "2025-06-02T13:25:04.694633",
+    "user_message": "I want a demo",
+    "conversation_history": [
+      {
+        "type": "user",
+        "original": "What is BillMart?",
+        "english": "What is BillMart?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.422539"
+      },
+      {
+        "type": "bot",
+        "english": "BillMart FinTech is a cutting-edge digital lending platform founded in 2021, connecting businesses and financiers to meet liquidity needs for Corporates and MSMEs. We have disbursed more than Rs 1250 crores in the last 16 months.",
+        "translated": "BillMart FinTech is a cutting-edge digital lending platform founded in 2021, connecting businesses and financiers to meet liquidity needs for Corporates and MSMEs. We have disbursed more than Rs 1250 crores in the last 16 months.",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.422539"
+      },
+      {
+        "type": "user",
+        "original": "Tell me about EmpCash",
+        "english": "Tell me about EmpCash",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.442133"
+      },
+      {
+        "type": "bot",
+        "english": "BillMart EmpCash (Employee Cash) is a salary advance solution designed to help employees access their earnings before payday. Whether you have an urgent expense, a medical emergency, or just need some extra funds to cover unexpected costs, EmpCash provides a quick and hassle-free way to get your salary when you need it the most.. Target: Salaried employees whose employers partner with BillMart, Limit: Up to 50% of earned salary (typically), varies by employer policy",
+        "translated": "BillMart EmpCash (Employee Cash) is a salary advance solution designed to help employees access their earnings before payday. Whether you have an urgent expense, a medical emergency, or just need some extra funds to cover unexpected costs, EmpCash provides a quick and hassle-free way to get your salary when you need it the most.. Target: Salaried employees whose employers partner with BillMart, Limit: Up to 50% of earned salary (typically), varies by employer policy",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.442133"
+      },
+      {
+        "type": "user",
+        "original": "What is supply chain finance?",
+        "english": "What is supply chain finance?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.453371"
+      },
+      {
+        "type": "bot",
+        "english": "Avail Short Term Financing Solutions for Supply Chain Covering Vendor Financing, Purchase Invoice Discounting, Invoice Financing, Dealer Financing and More. Minimum: Rs. 50,000, Requirements: GST bills not older than 3 months",
+        "translated": "Avail Short Term Financing Solutions for Supply Chain Covering Vendor Financing, Purchase Invoice Discounting, Invoice Financing, Dealer Financing and More. Minimum: Rs. 50,000, Requirements: GST bills not older than 3 months",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.453371"
+      },
+      {
+        "type": "user",
+        "original": "How do I contact you?",
+        "english": "How do I contact you?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.512457"
+      },
+      {
+        "type": "bot",
+        "english": "EmpCash process: Login → KYC → Apply for advance → Instant approval → Receive funds → Auto-repayment from paycheck.",
+        "translated": "EmpCash process: Login → KYC → Apply for advance → Instant approval → Receive funds → Auto-repayment from paycheck.",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.512457"
+      },
+      {
+        "type": "user",
+        "original": "What are your charges?",
+        "english": "What are your charges?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.544634"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "translated": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.544634"
+      },
+      {
+        "type": "user",
+        "original": "Tell me about registration",
+        "english": "Tell me about registration",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.605715"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "translated": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.605715"
+      },
+      {
+        "type": "user",
+        "original": "What is GigCash?",
+        "english": "What is GigCash?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.622699"
+      },
+      {
+        "type": "bot",
+        "english": "In today's fast-moving gig economy, freelancers, contract workers, and independent professionals often face irregular income flows. BillMart GigCash is designed to provide quick and hassle-free financial support, ensuring that gig workers have access to funds whenever they need them. Whether it's to cover urgent expenses, invest in new opportunities, or bridge the gap between payouts, GigCash offers instant, flexible financial assistance tailored for gig professionals.. Target: Freelancers, contract workers, independent professionals, gig workers earning through partner platforms, Limit: Up to 50% of estimated monthly earnings based on past earnings, work history, and income stability",
+        "translated": "In today's fast-moving gig economy, freelancers, contract workers, and independent professionals often face irregular income flows. BillMart GigCash is designed to provide quick and hassle-free financial support, ensuring that gig workers have access to funds whenever they need them. Whether it's to cover urgent expenses, invest in new opportunities, or bridge the gap between payouts, GigCash offers instant, flexible financial assistance tailored for gig professionals.. Target: Freelancers, contract workers, independent professionals, gig workers earning through partner platforms, Limit: Up to 50% of estimated monthly earnings based on past earnings, work history, and income stability",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.622699"
+      },
+      {
+        "type": "user",
+        "original": "How much can I borrow?",
+        "english": "How much can I borrow?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.648437"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "translated": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.649115"
+      },
+      {
+        "type": "user",
+        "original": "I want a demo",
+        "english": "I want a demo",
+        "language": "english",
+        "timestamp": "2025-06-02T13:25:04.694633"
+      }
+    ]
+  },
+  {
+    "user_id": "test_user_123",
+    "timestamp": "2025-06-05T11:54:16.622357",
+    "user_message": "I want a demo",
+    "conversation_history": [
+      {
+        "type": "user",
+        "original": "What is BillMart?",
+        "english": "What is BillMart?",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.467377"
+      },
+      {
+        "type": "bot",
+        "english": "BillMart FinTech Private Limited - Digital marketplace connecting borrowers with multiple financers - NOT a direct lender",
+        "translated": "BillMart FinTech Private Limited - Digital marketplace connecting borrowers with multiple financers - NOT a direct lender",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.467377"
+      },
+      {
+        "type": "user",
+        "original": "Tell me about EmpCash",
+        "english": "Tell me about EmpCash",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.484432"
+      },
+      {
+        "type": "bot",
+        "english": "BillMart EmpCash (Employee Cash) is a salary advance solution designed to help employees access their earnings before payday. Whether you have an urgent expense, a medical emergency, or just need some extra funds to cover unexpected costs, EmpCash provides a quick and hassle-free way to get your salary when you need it the most.. Target: Salaried employees whose employers partner with BillMart, Limit: Up to 50% of earned salary (typically), varies by employer policy",
+        "translated": "BillMart EmpCash (Employee Cash) is a salary advance solution designed to help employees access their earnings before payday. Whether you have an urgent expense, a medical emergency, or just need some extra funds to cover unexpected costs, EmpCash provides a quick and hassle-free way to get your salary when you need it the most.. Target: Salaried employees whose employers partner with BillMart, Limit: Up to 50% of earned salary (typically), varies by employer policy",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.484432"
+      },
+      {
+        "type": "user",
+        "original": "What is supply chain finance?",
+        "english": "What is supply chain finance?",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.492394"
+      },
+      {
+        "type": "bot",
+        "english": "Avail Short Term Financing Solutions for Supply Chain Covering Vendor Financing, Purchase Invoice Discounting, Invoice Financing, Dealer Financing and More. Minimum: Rs. 50,000, Requirements: GST bills not older than 3 months",
+        "translated": "Avail Short Term Financing Solutions for Supply Chain Covering Vendor Financing, Purchase Invoice Discounting, Invoice Financing, Dealer Financing and More. Minimum: Rs. 50,000, Requirements: GST bills not older than 3 months",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.492394"
+      },
+      {
+        "type": "user",
+        "original": "How do I contact you?",
+        "english": "How do I contact you?",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.537505"
+      },
+      {
+        "type": "bot",
+        "english": "Call +91 93269 46663 or email care@billmart.com",
+        "translated": "Call +91 93269 46663 or email care@billmart.com",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.537505"
+      },
+      {
+        "type": "user",
+        "original": "What are your charges?",
+        "english": "What are your charges?",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.555322"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "translated": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.555322"
+      },
+      {
+        "type": "user",
+        "original": "Tell me about registration",
+        "english": "Tell me about registration",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.584173"
+      },
+      {
+        "type": "bot",
+        "english": "BillMart FinTech Private Limited - Digital marketplace connecting borrowers with multiple financers - NOT a direct lender",
+        "translated": "BillMart FinTech Private Limited - Digital marketplace connecting borrowers with multiple financers - NOT a direct lender",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.584173"
+      },
+      {
+        "type": "user",
+        "original": "What is GigCash?",
+        "english": "What is GigCash?",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.592163"
+      },
+      {
+        "type": "bot",
+        "english": "In today's fast-moving gig economy, freelancers, contract workers, and independent professionals often face irregular income flows. BillMart GigCash is designed to provide quick and hassle-free financial support, ensuring that gig workers have access to funds whenever they need them. Whether it's to cover urgent expenses, invest in new opportunities, or bridge the gap between payouts, GigCash offers instant, flexible financial assistance tailored for gig professionals.. Target: Freelancers, contract workers, independent professionals, gig workers earning through partner platforms, Limit: Up to 50% of estimated monthly earnings based on past earnings, work history, and income stability",
+        "translated": "In today's fast-moving gig economy, freelancers, contract workers, and independent professionals often face irregular income flows. BillMart GigCash is designed to provide quick and hassle-free financial support, ensuring that gig workers have access to funds whenever they need them. Whether it's to cover urgent expenses, invest in new opportunities, or bridge the gap between payouts, GigCash offers instant, flexible financial assistance tailored for gig professionals.. Target: Freelancers, contract workers, independent professionals, gig workers earning through partner platforms, Limit: Up to 50% of estimated monthly earnings based on past earnings, work history, and income stability",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.592163"
+      },
+      {
+        "type": "user",
+        "original": "How much can I borrow?",
+        "english": "How much can I borrow?",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.603304"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "translated": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.603304"
+      },
+      {
+        "type": "user",
+        "original": "I want a demo",
+        "english": "I want a demo",
+        "language": "english",
+        "timestamp": "2025-06-05T11:54:16.622357"
+      }
+    ]
+  },
+  {
+    "user_id": "test_user_123",
+    "timestamp": "2025-06-05T12:53:52.488264",
+    "user_message": "I want a demo",
+    "conversation_history": [
+      {
+        "type": "user",
+        "original": "What is BillMart?",
+        "english": "What is BillMart?",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.371927"
+      },
+      {
+        "type": "bot",
+        "english": "BillMart FinTech Private Limited - Digital marketplace connecting borrowers with multiple financers - NOT a direct lender",
+        "translated": "BillMart FinTech Private Limited - Digital marketplace connecting borrowers with multiple financers - NOT a direct lender",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.371927"
+      },
+      {
+        "type": "user",
+        "original": "Tell me about EmpCash",
+        "english": "Tell me about EmpCash",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.389452"
+      },
+      {
+        "type": "bot",
+        "english": "BillMart EmpCash (Employee Cash) is a salary advance solution designed to help employees access their earnings before payday. Whether you have an urgent expense, a medical emergency, or just need some extra funds to cover unexpected costs, EmpCash provides a quick and hassle-free way to get your salary when you need it the most.. Target: Salaried employees whose employers partner with BillMart, Limit: Up to 50% of earned salary (typically), varies by employer policy",
+        "translated": "BillMart EmpCash (Employee Cash) is a salary advance solution designed to help employees access their earnings before payday. Whether you have an urgent expense, a medical emergency, or just need some extra funds to cover unexpected costs, EmpCash provides a quick and hassle-free way to get your salary when you need it the most.. Target: Salaried employees whose employers partner with BillMart, Limit: Up to 50% of earned salary (typically), varies by employer policy",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.389452"
+      },
+      {
+        "type": "user",
+        "original": "What is supply chain finance?",
+        "english": "What is supply chain finance?",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.395435"
+      },
+      {
+        "type": "bot",
+        "english": "Avail Short Term Financing Solutions for Supply Chain Covering Vendor Financing, Purchase Invoice Discounting, Invoice Financing, Dealer Financing and More. Minimum: Rs. 50,000, Requirements: GST bills not older than 3 months",
+        "translated": "Avail Short Term Financing Solutions for Supply Chain Covering Vendor Financing, Purchase Invoice Discounting, Invoice Financing, Dealer Financing and More. Minimum: Rs. 50,000, Requirements: GST bills not older than 3 months",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.395435"
+      },
+      {
+        "type": "user",
+        "original": "How do I contact you?",
+        "english": "How do I contact you?",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.423416"
+      },
+      {
+        "type": "bot",
+        "english": "Call +91 93269 46663 or email care@billmart.com",
+        "translated": "Call +91 93269 46663 or email care@billmart.com",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.423416"
+      },
+      {
+        "type": "user",
+        "original": "What are your charges?",
+        "english": "What are your charges?",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.432823"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "translated": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.432823"
+      },
+      {
+        "type": "user",
+        "original": "Tell me about registration",
+        "english": "Tell me about registration",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.449385"
+      },
+      {
+        "type": "bot",
+        "english": "BillMart FinTech Private Limited - Digital marketplace connecting borrowers with multiple financers - NOT a direct lender",
+        "translated": "BillMart FinTech Private Limited - Digital marketplace connecting borrowers with multiple financers - NOT a direct lender",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.449385"
+      },
+      {
+        "type": "user",
+        "original": "What is GigCash?",
+        "english": "What is GigCash?",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.458233"
+      },
+      {
+        "type": "bot",
+        "english": "In today's fast-moving gig economy, freelancers, contract workers, and independent professionals often face irregular income flows. BillMart GigCash is designed to provide quick and hassle-free financial support, ensuring that gig workers have access to funds whenever they need them. Whether it's to cover urgent expenses, invest in new opportunities, or bridge the gap between payouts, GigCash offers instant, flexible financial assistance tailored for gig professionals.. Target: Freelancers, contract workers, independent professionals, gig workers earning through partner platforms, Limit: Up to 50% of estimated monthly earnings based on past earnings, work history, and income stability",
+        "translated": "In today's fast-moving gig economy, freelancers, contract workers, and independent professionals often face irregular income flows. BillMart GigCash is designed to provide quick and hassle-free financial support, ensuring that gig workers have access to funds whenever they need them. Whether it's to cover urgent expenses, invest in new opportunities, or bridge the gap between payouts, GigCash offers instant, flexible financial assistance tailored for gig professionals.. Target: Freelancers, contract workers, independent professionals, gig workers earning through partner platforms, Limit: Up to 50% of estimated monthly earnings based on past earnings, work history, and income stability",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.458233"
+      },
+      {
+        "type": "user",
+        "original": "How much can I borrow?",
+        "english": "How much can I borrow?",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.471626"
+      },
+      {
+        "type": "bot",
+        "english": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "translated": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.471626"
+      },
+      {
+        "type": "user",
+        "original": "I want a demo",
+        "english": "I want a demo",
+        "language": "english",
+        "timestamp": "2025-06-05T12:53:52.488264"
+      }
+    ]
+  }
+]

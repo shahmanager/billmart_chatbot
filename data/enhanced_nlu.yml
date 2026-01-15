@@ -1,0 +1,107 @@
+# data/enhanced_nlu.yml
+version: "3.1"
+
+nlu:
+# Intent naming convention: verb_noun_context
+# Why? Predictable, searchable, maintainable
+
+- intent: declare_gig_worker
+  examples: |
+    # Core terms (must have)
+    - gig worker
+    - freelancer
+    - independent contractor
+    
+    # Platform specific (domain knowledge)
+    - uber driver
+    - ola driver  
+    - zomato delivery
+    - swiggy partner
+    - dunzo executive
+    
+    # Natural variations (how users actually talk)
+    - i work gigs
+    - i do freelance work
+    - i drive for uber
+    - delivery partner
+    - i'm a contractor
+    
+    # Sentence context (real conversations)
+    - i am a gig worker
+    - i work as a freelancer
+    - i'm an independent contractor
+    
+# Production tip: 15-20 examples per intent minimum
+# More variety = better classification accuracy
+
+- intent: declare_salaried_employee  
+  examples: |
+    # Job types
+    - salaried employee
+    - full time employee
+    - permanent employee
+    - company employee
+    
+    # Natural expressions
+    - i work for a company
+    - i have a job
+    - i'm employed
+    - i get salary
+    - i work full time
+    
+    # Industry variations
+    - software engineer
+    - bank employee
+    - government employee
+    - corporate employee
+
+- intent: ask_gigcash_info
+  examples: |
+    # Direct product mentions
+    - gigcash
+    - gig cash
+    - tell me about gigcash
+    - what is gigcash
+    - gigcash details
+    
+    # Feature-based queries (what users actually want to know)
+    - funding for gig workers
+    - money for freelancers
+    - loan for uber drivers
+    - advance for delivery partners
+    - cash for contractors
+    
+    # Problem-based queries (user pain points)
+    - need money between payments
+    - cash flow issues gig work
+    - irregular income funding
+    - bridge loan freelancer
+
+- intent: ask_process
+  examples: |
+    # Direct process queries
+    - process
+    - what is the process
+    - how does it work
+    - what are the steps
+    - procedure
+    
+    # Application focused
+    - how to apply
+    - application process
+    - how do i get this
+    - what do i need to do
+    
+    # Context dependent (relies on conversation state)
+    - tell me how
+    - what's next
+    - how do i proceed
+    - walk me through it
+
+# Entity recognition (for structured data extraction)
+- intent: ask_loan_amount
+  examples: |
+    - i need [50000](amount) rupees
+    - can i get [2 lakh](amount)
+    - loan for [₹75000](amount)
+    - advance of [1.5 lakhs](amount)

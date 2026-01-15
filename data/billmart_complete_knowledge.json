@@ -1,0 +1,536 @@
+{
+  "intent_keywords": {
+    "supply_chain_finance": [
+      "supply chain finance", "SCF", "B-SCF", "invoice financing", 
+      "bill discounting", "vendor financing", "dealer financing"
+    ],
+    "insurance_claim_finance": [
+      "insurance claim finance", "ICF", "hospital financing", 
+      "medical financing", "claim delay", "insurance delay"
+    ],
+    "empcash": [
+      "empcash", "emp cash", "employee cash", "salary advance", 
+      "employee advance", "payroll advance"
+    ],
+    "gigcash": [
+      "gigcash", "gig cash", "freelancer financing", "gig worker",
+      "uber", "zomato", "swiggy", "delivery partner"
+    ]
+  },
+
+  "company_info": {
+    "basic": {
+      "name": "BillMart FinTech Private Limited",
+      "tagline": "Empowering MSMEs & Corporates with Digital Bill Discounting",
+      "alternative_tagline": "Avail Trade Finance through Working Capital Loans, Supply Chain Finance, Revenue Discounting, Import-Export Finance, and everything around Bill!",
+      "founded": "2021",
+      "headquarters": "Mumbai, Maharashtra",
+      "company_size": "11-50 employees",
+      "business_model": "Digital marketplace connecting borrowers with multiple financers - NOT a direct lender",
+      "mission": "Unlocking working capital through bill discounting and smart financing solutions",
+      "description": "BillMart FinTech is a cutting-edge digital lending platform founded in 2021, connecting businesses and financiers to meet liquidity needs for Corporates and MSMEs. We have disbursed more than Rs 1250 crores in the last 16 months."
+    },
+    
+    "contact": {
+      "phone": "+91 93269 46663",
+      "website": "https://www.billmart.com",
+      "email": {
+        "support": "care@billmart.com",
+        "compliance": "compliance@billmart.com"
+      },
+      "offices": {
+        "mumbai": {
+          "address": "1102, K.P Aurum, Marol Naka, Marol Maroshi Road, Andheri East, Mumbai, Maharashtra 400059",
+          "type": "Headquarters"
+        },
+        "delhi": {
+          "address": "MSME House, C-9/9848, Vasant Kunj, New Delhi, Delhi 110070",
+          "type": "Branch Office"
+        }
+      }
+    },
+
+    "leadership": {
+      "MD_CEO": "Ashok Mittal",
+      "Co_Founder_COO": "Sandeep Doshi",
+      "Co_Founder_CTO": "Jainam Vora",
+      "Chairman_NXD": "S. Ravi",
+      "experience": "Over 100 years of combined experience in the team"
+    },
+
+    "achievements": {
+      "recent_award": "Dominant LendTech of the Year Award at LendTechX 2024",
+      "volume_disbursed": "Rs 2500+ Crores",
+      "alt_volume": "More than Rs 1250 crores in the last 16 months",
+      "invoices_processed": "23,259+",
+      "financers_network": "40+ Financers Onboarded",
+      "corporate_relationships": "70+ Corporate Relationships"
+    },
+
+    "certifications": ["ISO 27001", "SOC2"],
+    
+    "technology": {
+      "features": [
+        "AI-Driven Deep-Tier Financing",
+        "Autonomous Lending Decision Engines", 
+        "AI-Based Early Warning Systems",
+        "Blockchain-AI Integration for Smart Contracts",
+        "AI-Powered Credit Scoring",
+        "Advanced Analytics and AI-driven insights",
+        "Robust encryption and regulatory compliance",
+        "Seamless integration capability with bespoke APIs"
+      ]
+    },
+
+    "partnerships": {
+      "cmai": {
+        "name": "Clothing Manufacturers Association of India",
+        "role": "Official Digital Funding Partner",
+        "industry": "Textile and apparel sector (Rs 138 billion industry)",
+        "employees": "Over 45 million employees"
+      }
+    },
+
+    "target_customers": ["MSMEs", "Corporates", "Suppliers", "Dealers", "Individuals", "Gig Workers"]
+  },
+
+  "products": {
+    "business_products": {
+      "supply_chain_finance": {
+        "name": "Supply Chain Finance (B-SCF)",
+        "full_name": "Supply Chain Finance - Business Supply Chain Finance",
+        "description": "Avail Short Term Financing Solutions for Supply Chain Covering Vendor Financing, Purchase Invoice Discounting, Invoice Financing, Dealer Financing and More",
+        "detailed_description": "Supply Chain Finance by BillMart allows businesses to manage cash flow through short-term financing with dealer/vendor support",
+        "target_customers": "MSMEs, Corporates, Suppliers, Dealers",
+        "minimum_amount": "Rs. 50,000",
+        "document_requirements": "GST Bills not older than 3 months",
+        "maximum_tenure": "180 days",
+        "process": [
+          "Upload Invoice - Either party initiates transaction",
+          "GST Compliance Check - Automatic verification through platform", 
+          "Counterparty Review - Invoice acceptance and agreement",
+          "Financer Approval - Verified invoices approved for funding",
+          "Disbursement - Direct payment to supplier (minus upfront interest)",
+          "Repayment - Buyer pays financer full invoice amount per agreed terms"
+        ],
+        "benefits": [
+          "Unlock Working Capital",
+          "Better Vendor/Dealer Management",
+          "Collateral Free", 
+          "Flexibility to Tackle Financing Needs",
+          "Uninterrupted operations",
+          "Strengthened supplier relationships"
+        ],
+        "features": [
+          "AI-powered platform",
+          "Instant cash flow conversion",
+          "Anchor-based financing"
+        ]
+      },
+
+      "sales_bill_discounting": {
+        "name": "Sales Bill Discounting",
+        "description": "Allows MSMEs/sellers to receive immediate funds against their sales invoices instead of waiting 30-90 days for payment",
+        "target": "MSMEs/Sellers who want immediate payment", 
+        "process": "Sell receivables to financial institutions at discounted rate",
+        "benefit": "Immediate cash instead of waiting 30/60/90 days for payment",
+        "cost_borne_by": "Seller"
+      },
+
+      "purchase_bill_discounting": {
+        "name": "Purchase Bill Discounting",
+        "description": "Enables buyers to secure funds to pay suppliers early",
+        "target": "Buyers/Anchors who want to pay suppliers early",
+        "process": "Financer pays suppliers directly on behalf of buyer", 
+        "benefit": "Optimized working capital while ensuring timely vendor payments"
+      },
+
+      "vendor_finance": {
+        "name": "Vendor Finance",
+        "description": "Available for supply chain optimization, supports suppliers and distributors financially"
+      },
+
+      "dealer_finance": {
+        "name": "Dealer Finance", 
+        "description": "Financial support for dealer network, part of comprehensive supply chain solutions"
+      },
+
+      "early_payment_finance": {
+        "name": "Early Payment Finance",
+        "description": "Accelerated payment solutions, working capital optimization"
+      },
+
+      "lease_rental_discounting": {
+        "name": "Lease Rental Discounting (LRD)",
+        "description": "BillMart brings you Lease Rental Discounting (LRD), a specialized financing solution designed to unlock the value of future rental cash flows. This product enables property owners to access immediate funds by leveraging their lease agreements with tenants.",
+        "target": "Property owners with lease agreements",
+        "process_description": "The property owners (Borrower) put forward funding request from financer based on rental bonds and bond due date, repayment schedule agreement with Operators. For such transaction, Operators will act as approval party only. Based on validation of the transaction for parameters like operational limit availability, validity of bonds, etc. financer is instantaneously processing for disbursement by considering the interest parameter into the property owner's account. As per the repayment schedule property owners (Borrower) processes for repayment to the financer.",
+        "approval_party": "Operators act as approval party only"
+      },
+
+      "insurance_claim_finance": {
+        "name": "Insurance Claim Finance (ICF)",
+        "description": "Insurance Claim Finance (ICF) provides hospitals with immediate access to funds while waiting for delayed insurance payouts. This product ensures operational continuity and liquidity, helping hospitals cover essential expenses without disruption. By streamlining the claim process, it allows hospitals to avoid cash flow issues and reliance on traditional financing methods, ensuring smooth day-to-day operations and uninterrupted patient care",
+        "target": "Hospitals waiting for insurance payouts",
+        "timeline": "24-48 hour disbursement",
+        "process_description": "Hospital (Borrower) advances to process insurance claim with Insurance Providers. As Insurance Providers takes little time to process the claims, whereas Hospital's required funds flow for various ongoing requirement; Hospital (Borrower) raise funding request based on accepted claims with Insurance Provider. Based on validation of the transaction for parameters like operational limit availability, validity of claims, etc. financer is instantaneously processing for disbursement by considering the interest parameter into the Insurance Provider's account. On the due date the Hospital (Borrower) processes for repayment to the financer.",
+        "benefits": [
+          "Quick Approvals - Advanced algorithms for fast processing",
+          "Competitive Rates - Industry-leading interest rates", 
+          "Uninterrupted Operations - Immediate access to maintain liquidity",
+          "Transparent and Simple Process - Clear terms, no hidden fees",
+          "Secure Transactions - Robust encryption and data security protocols"
+        ],
+        "features": {
+          "collateral": "No collateral required - unsecured financing",
+          "security": "Advanced encryption and data security protocols",
+          "flexibility": "Flexible repayment if claim delayed or paid partially"
+        }
+      },
+
+      "term_loan": {
+        "name": "Term Loan",
+        "description": "Longer-term financing solutions, business expansion and growth capital"
+      },
+
+      "short_term_loan": {
+        "name": "Short Term Loan",
+        "description": "Quick financing for immediate needs, flexible repayment options"
+      }
+    },
+
+    "individual_products": {
+      "empcash": {
+        "name": "EmpCash - Employee Cash",
+        "tagline": "Your Salary, When You Need It Most",
+        "alternative_tagline": "Salary Advances for Employees",
+        "description": "BillMart EmpCash (Employee Cash) is a salary advance solution designed to help employees access their earnings before payday. Whether you have an urgent expense, a medical emergency, or just need some extra funds to cover unexpected costs, EmpCash provides a quick and hassle-free way to get your salary when you need it the most.",
+        "detailed_description": "Get a portion of your salary in advance, with automatic repayment from your next paycheck.",
+        "target": "Salaried employees whose employers partner with BillMart",
+        "amount_limit": "Up to 50% of earned salary (typically), varies by employer policy",
+        "process": [
+          "Login & Complete KYC - Log in to BillMart account to view eligible salary advance amount based on data provided by employer. Complete KYC verification and sign/upload required documents",
+          "Apply for Advance - Enter the amount you need (within your eligible limit) and submit your request",
+          "Get Instant Approval - Your request is processed in minimal time with quick checks", 
+          "Withdraw Funds - Once approved, review the final amount and confirm your withdrawal request",
+          "Receive Your Salary Early - The requested amount is instantly transferred to your bank account",
+          "Automatic Repayment - The advance is deducted from your next paycheck, ensuring a seamless repayment process"
+        ],
+        "benefits": [
+          "Quick Approval - No complex paperwork, just fast processing",
+          "No Hidden Fees - Transparent interest rates and a small processing fee",
+          "Stress-Free Repayment - Auto-deduction from salary, no manual payments",
+          "Instant Access to Your Salary - No need to wait until payday",
+          "No Long-Term Debt - EmpCash is a salary advance, so there's no long repayment periods",
+          "Seamless & Hassle-Free Process - Fast approval, no lengthy paperwork",
+          "Transparent & Low-Cost - Clear, upfront interest rates with minimal processing fees",
+          "Secure & Trusted - Powered by BillMart's robust financial infrastructure"
+        ],
+        "billmart_advantage": [
+          "Instant Access to Earnings - Get your money when you need it most",
+          "Transparent & Fair - No hidden fees—know the costs upfront", 
+          "Seamless Digital Processing - No long paperwork, just a quick and simple process",
+          "Secure & Trusted - Your data and transactions are safe with us",
+          "Flexible Repayment - Automatic deductions make repayment hassle-free"
+        ]
+      },
+
+      "gigcash": {
+        "name": "GigCash",
+        "tagline": "Empowering Gig Workers with Smart Financing",
+        "description": "In today's fast-moving gig economy, freelancers, contract workers, and independent professionals often face irregular income flows. BillMart GigCash is designed to provide quick and hassle-free financial support, ensuring that gig workers have access to funds whenever they need them. Whether it's to cover urgent expenses, invest in new opportunities, or bridge the gap between payouts, GigCash offers instant, flexible financial assistance tailored for gig professionals.",
+        "additional_description": "With BillMart GigCash, you get financial security and stability without the burden of traditional loans or lengthy approval processes.",
+        "target": "Freelancers, contract workers, independent professionals, gig workers earning through partner platforms",
+        "amount_limit": "Up to 50% of estimated monthly earnings based on past earnings, work history, and income stability",
+        "process": [
+          "LogIn & Complete KYC - Sign Up & Verify Your Profile: Log in to your BillMart account, connect your gig platform, and complete KYC verification",
+          "Eligibility Check - Check Your Eligibility: Based on your past earnings and work history, your eligible amount is displayed instantly",
+          "Cash Advance - Request a Cash Advance: Select the amount you need (within your eligible limit) and submit your request",
+          "Instant Approval - Instant Approval & Disbursement: Once approved, the funds are transferred directly to your bank account within minutes",
+          "Auto Repayment - Seamless Auto-Repayment: Repayments are automatically deducted from your gig platform earnings, ensuring a hassle-free and seamless process"
+        ],
+        "benefits": [
+          "Fast & Hassle-Free Access - No waiting for payday! Get instant financial support based on your earnings",
+          "Designed for Gig Workers - Unlike traditional financial products, GigCash is built specifically for freelancers, independent contractors, and self-employed individuals",
+          "No Collateral or Credit Score Requirements - Forget complex paperwork and credit history checks. Eligibility based on ongoing earnings and gig work profile",
+          "Transparent & Low-Cost - Clear, upfront interest rates with minimal processing fees—no hidden charges",
+          "Seamless Auto-Repayment - Automatically deducted from gig platform earnings"
+        ]
+      }
+    },
+
+    "specialized_services": {
+      "imark": {
+        "name": "iMARK - MSMEs AI Rating Key", 
+        "full_name": "India's first AI-based co-branded grading solution for MSMEs",
+        "description": "iMARK is BillMart's AI-powered credit grading solution designed specifically for MSMEs, providing reliable, actionable insights into creditworthiness. With iMARK, businesses can make informed decisions, improve access to financing, and reduce financial risks. The solution combines advanced data analysis with tailored methodologies, offering businesses a comprehensive, fair, and relevant credit grading.",
+        "process_description": "iMARK is a paperless, digital credit grading tool that evaluates a business's creditworthiness through both quantitative and qualitative assessments.",
+        "process": [
+          "Submission of Documents - Businesses submit financial statements and operational data",
+          "Initial Review - iMARK ensures completeness and identifies key focus areas",
+          "Detailed Financial Analysis - A thorough evaluation of profitability, liquidity, debt coverage, cash flow and many more parameters", 
+          "Grading Assessment - The business receives a credit grading based on the evaluation",
+          "Grading Dissemination - The final grading is shared with the business and published with consent for stakeholders like banks and investors"
+        ],
+        "benefits": [
+          "Expertise in SMEs and MSMEs - Designed to meet specific credit assessment needs of SMEs and MSMEs",
+          "Affordable Solutions - Cost-effective credit grading services accessible for small businesses",
+          "Improved Access to Financing - Solid credit grade enhances chances of securing loans and better credit terms",
+          "Tailored Methodologies - Industry-specific methodologies for fair and accurate grading",
+          "Supporting Business Growth - Identifies strengths and weaknesses, helps improve financial discipline"
+        ],
+        "status": "Upcoming Innovation"
+      }
+    }
+  },
+
+  "detailed_faqs": {
+    "registration_faqs": {
+      "how_to_register": {
+        "question": "How do I Register as Business on the BillMart platform?",
+        "answer": "Registering on BillMart is a quite simple process for any entity. A business user can sign-up on the platform with just a few clicks and fully digital documentations by submitting the details depending upon the type of entity and services it wants to avail, like KYC, GSTIN, CIN, Bank Details, MSME Registration Detail and upload documents for authorization, bank statements etc. Once a registration request is submitted, generally it takes about 2 business days for Business to start using facilities on the Platform."
+      },
+      "registration_charges": {
+        "question": "Are there any registration or transaction charges for using services on the BillMart platform?",
+        "answer": "No. Presently there are no charges for registration, data & documentation charges, annual charges or transaction charges on the Platform."
+      },
+      "who_can_register": {
+        "question": "Who can register the entity on BillMart to complete the Business onboarding?", 
+        "answer": "Depending upon the type of entity and services Business wants to avail, an Authorised Person is required to digitally sign the documents with digital signature or Aadhar based e-sign."
+      }
+    },
+
+    "financial_faqs": {
+      "nach_mandate": {
+        "question": "What is the NACH mandate? Is it mandatory to submit it?",
+        "answer": "NACH stands for National Automated Clearing House setup by NPCI. NACH mandate is an authorization that a bank account holder provides to Debit funds as per the instruction. BillMart platform takes NACH mandate as security from the businesses to authorise BillMart and/or its Escrow Bank to debit the bank account in case money is not deposited for making payment to the financer on the maturity date. Depending on the entity type and finance facilities needed, NACH may be required."
+      },
+      "nach_benefits": {
+        "question": "How does the NACH mandate help Businesses?",
+        "answer": "With the NACH mandates, a greater number of Financers can provide the finance limits to a Business or even existing financers can increase the limit. And with a greater number of Financers providing limits, overall cost of finance comes down and increases finances, thus resulting in more growth."
+      },
+      "data_security": {
+        "question": "Is my Financial Information secure? Who can see it?",
+        "answer": "Yes, the financial information of businesses is secured with the BillMart platform. However, as per the consent granted by the businesses, BillMart is allowed to fetch all the financial and entity information and share the relevant financial details with the Bank, NBFC, other financers, insurance companies, credit rating companies etc. for credit evaluation, decision making and for other processes."
+      }
+    },
+
+    "transaction_faqs": {
+      "supported_transactions": {
+        "question": "What type of transactions are supported on the platform?",
+        "answer": "Presently, BillMart supports some of the most critical aspects of the Working Capital with Bill (Invoice) Financing, Discounting, Reverse Bill Discounting and Supply Chain Financing. BillMart is working towards more and more Business-friendly finance facilities and those will be launched soon."
+      },
+      "bill_types": {
+        "question": "What type of Bills can be uploaded on the BillMart platform?",
+        "answer": "Any valid GST Bills / Invoices related to the goods or services provided by the seller to the buyer which is outstanding/receivable can be uploaded on the BillMart platform. Uploading e-way bill where available helps in faster processing. The uploaded bill, once approved and accepted by the counter party, is sent to financers for bidding to ensure lowest finance cost for the Business."
+      },
+      "bill_restrictions": {
+        "question": "Does BillMart restrict bill to be discounted based on bill amount?",
+        "answer": "BillMart allows any valid GST Bill not older than 3 months and of more than Rs. 50,000 for bill discounting."
+      },
+      "discounting_percentage": {
+        "question": "What is the maximum discounting % on the platform and who is allowed to set?",
+        "answer": "BillMart believes that business is the king. And so, Business decides maximum % they are willing to accept for availing finance facility or can decide to keep it open and invite the bids and select the lowest bid."
+      },
+      "maximum_tenure": {
+        "question": "What is the maximum bill discounting tenure?",
+        "answer": "BillMart allows a maximum period of 180 days as maximum tenure for bill discounting and related transactions."
+      },
+      "recourse_transaction": {
+        "question": "What is the transaction with Recourse and when recourse is triggered?",
+        "answer": "Transaction is said to be with recourse when the party receiving the fund guarantees the financer to settle the liability of the deal if in any instance the counter party does not pay the bill amount on the maturity date. Depending upon the type of entity and transaction, Recourse can be optional or mandatory."
+      },
+      "deal_note": {
+        "question": "What is the Deal Note?",
+        "answer": "Deal Note is the legally binding document for all parties. It contains details of the transaction like type, finance amount, cost, settlement date, recourse detail etc."
+      }
+    },
+
+    "settlement_faqs": {
+      "fund_crediting": {
+        "question": "When is the fund credited once the deal is confirmed?",
+        "answer": "Depending upon the transaction, the fund is credited to the Business account on T+1 or T+2 basis. The details of the same shall be available at the time of transacting and in Deal Note."
+      },
+      "settlement_payment": {
+        "question": "How can Business make pay-in of settlement amount?",
+        "answer": "The details of the escrow accounts maintained with banks are available on the platform under their profile. Business is required to make pay-in latest by cut-off time as per the Deal Note."
+      }
+    },
+
+    "empcash_faqs": {
+      "empcash_gigcash_eligibility": {
+        "question": "Who can apply for EmpCash and GigCash?",
+        "answer": "EmpCash: Salaried employees eligible for a salary advance. GigCash: Gig workers earning through partner platforms."
+      },
+      "empcash_gigcash_repayment": {
+        "question": "How do I repay the advance?",
+        "answer": "EmpCash: Auto-deduction from your next paycheck. GigCash: Auto-deduction from gig platform earnings."
+      },
+      "empcash_gigcash_credit_impact": {
+        "question": "Will this affect my credit score?",
+        "answer": "Yes, both EmpCash and GigCash can impact your credit score. Timely repayments help maintain a good credit history."
+      },
+      "empcash_gigcash_fees": {
+        "question": "What are the fees and interest charges?",
+        "answer": "EmpCash: Fair interest rate with a small processing fee. GigCash: Competitive interest rate, with costs clearly displayed upfront."
+      },
+      "empcash_eligibility": {
+        "question": "Who is eligible for BillMart EmpCash?",
+        "answer": "Any salaried employee whose employer is partnered with BillMart can apply for EmpCash. You must meet basic eligibility criteria set by your employer."
+      },
+      "empcash_amount_limit": {
+        "question": "How much of my salary can I withdraw in advance?",
+        "answer": "Typically, you can access up to 50% of your earned salary, but the limit may vary based on your employer's policy."
+      },
+      "empcash_credit_impact": {
+        "question": "Does taking an advance affect my credit score?",
+        "answer": "Yes, EmpCash is a salary advance, and it may impact your credit score. Since repayments are automatically deducted from your next paycheck, making timely payments helps maintain a positive credit history."
+      },
+      "empcash_fees": {
+        "question": "What are the fees and interest charges?",
+        "answer": "EmpCash charges a fair interest rate along with a small processing fee. All costs are clearly displayed upfront before you confirm your salary advance request, ensuring complete transparency."
+      },
+      "empcash_speed": {
+        "question": "How quickly will I receive the salary advance?",
+        "answer": "In most cases, funds are transferred instantly or within a few hours after approval."
+      },
+      "empcash_multiple_usage": {
+        "question": "Can I use EmpCash multiple times in a month?",
+        "answer": "Yes, as long as you stay within your approved salary advance limit, you can use EmpCash multiple times."
+      }
+    },
+
+    "gigcash_faqs": {
+      "gigcash_eligibility": {
+        "question": "Who can apply for BillMart GigCash?",
+        "answer": "GigCash is available to freelancers, independent contractors, and gig workers who receive payments through verified platforms or clients."
+      },
+      "gigcash_funding_amount": {
+        "question": "How much funding can I get?",
+        "answer": "Your eligible amount is based on your past earnings, work history, and income stability. You can typically access up to 50% of your estimated monthly earnings."
+      },
+      "gigcash_credit_impact": {
+        "question": "Will this affect my credit score?", 
+        "answer": "Yes, GigCash is considered a loan, and it may impact your credit score. Since repayments are automatically deducted from your gig platform earnings, timely payments help maintain a positive credit history."
+      },
+      "gigcash_fees": {
+        "question": "What fees or charges apply?",
+        "answer": "GigCash charges a fair interest rate along with a small processing fee. All costs are clearly displayed upfront before you confirm your advance request, ensuring complete transparency."
+      },
+      "gigcash_speed": {
+        "question": "How soon can I get the money?",
+        "answer": "Once approved, the funds are transferred instantly or within a few hours to your bank account."
+      },
+      "gigcash_irregular_income": {
+        "question": "What if I have irregular income?",
+        "answer": "GigCash is designed for fluctuating earnings. If you have irregular income, your eligibility may vary, but flexible repayment options ensure you don't face unnecessary pressure."
+      }
+    },
+
+    "imark_faqs": {
+      "what_is_imark": {
+        "question": "What is iMARK?",
+        "answer": "iMARK is BillMart's AI-powered credit grading tool designed to assess the creditworthiness of MSMEs, providing actionable insights for better decision-making."
+      },
+      "imark_business_growth": {
+        "question": "How can iMARK help my business grow?",
+        "answer": "iMARK provides accurate credit insights that enable MSMEs to make confident decisions, secure financing, and manage risks effectively."
+      },
+      "imark_suitability": {
+        "question": "Is iMARK suitable for all MSMEs?",
+        "answer": "Yes, iMARK is specifically built to meet the needs of MSMEs, providing credit assessments tailored to their unique financial challenges."
+      },
+      "imark_financing_access": {
+        "question": "How does iMARK improve access to financing for my business?",
+        "answer": "A favorable iMARK credit grade helps MSMEs gain trust with lenders, increasing their chances of securing loans and favorable credit terms."
+      },
+      "imark_confidentiality": {
+        "question": "Is the information I provide for iMARK confidential?",
+        "answer": "Yes, all information submitted for iMARK is kept confidential and shared only with your consent, ensuring the privacy and security of your business."
+      },
+      "imark_industry_coverage": {
+        "question": "Can iMARK be used for businesses in any industry?",
+        "answer": "Yes, iMARK is designed to assess businesses across various industries, offering customized credit grades based on specific financial and operational factors relevant to each sector."
+      },
+      "imark_update_frequency": {
+        "question": "How frequently should I update my credit grading with iMARK?",
+        "answer": "While iMARK provides a one-time grading, it's recommended to update your credit assessment periodically, especially when there are significant changes in your business's financials."
+      },
+      "imark_benefits": {
+        "question": "What benefits does a good iMARK grading offer for my business?",
+        "answer": "A good iMARK grading increases your credibility, helps secure better financing options, and positions your business for growth with financial institutions and investors."
+      },
+      "imark_size_suitability": {
+        "question": "Is iMARK only for large MSMEs or can smaller ones use it too?",
+        "answer": "iMARK is suitable for MSMEs of all sizes, offering tailored grading solutions that cater to both larger and smaller businesses with diverse financial needs."
+      },
+      "imark_business_planning": {
+        "question": "Can iMARK help me with business planning and strategy?",
+        "answer": "Yes, iMARK provides valuable insights into your financial health, which can be used to refine business plans, improve financial strategies, and enhance overall business performance."
+      }
+    },
+
+    "insurance_claim_finance_faqs": {
+      "icf_what_is": {
+        "question": "What is Insurance Claim Financing (ICF), and how can it help my hospital?",
+        "answer": "Insurance Claim Financing (ICF) allows hospitals to access funds immediately while waiting for insurance claims to be processed. It bridges the gap caused by delayed payouts, helping you maintain cash flow and ensuring continuous operations without financial strain."
+      },
+      "icf_speed": {
+        "question": "How fast can I access the funds with BillMart's Insurance Claim Finance (ICF)?",
+        "answer": "Once your claim is verified, funds are disbursed within 24-48 hours. This rapid access to capital ensures your hospital can meet operational costs without delay, even while waiting for insurance payouts."
+      },
+      "icf_difference": {
+        "question": "What makes BillMart's Insurance Claim Finance (ICF) different from other financing options?",
+        "answer": "Unlike traditional loans or credit lines, our Insurance Claim Finance (ICF) product is tailored for hospitals facing delays in insurance claims. It offers flexible repayment based on your claim's settlement timeline and ensures uninterrupted operations during the waiting period."
+      },
+      "icf_collateral": {
+        "question": "Do I need to provide collateral to get Insurance Claim Finance (ICF)?",
+        "answer": "No collateral is required. BillMart offers unsecured financing, so your hospital's assets are not at risk. We evaluate the strength of your claim and financial health to provide funding, making the process simple and hassle-free."
+      },
+      "icf_application": {
+        "question": "How do I apply for Insurance Claim Finance (ICF) and is the process complicated?",
+        "answer": "The application process is straightforward! Simply submit your claim details through our user-friendly platform, and we'll handle the rest. No complicated paperwork, just fast approval and easy access to funds."
+      },
+      "icf_claim_process": {
+        "question": "Will BillMart take over my insurance claim process (ICF)?",
+        "answer": "Not at all! BillMart streamlines the financing process, but your insurance claim will continue to be handled by your insurer. We simply help you bridge the gap while you wait for the payout, ensuring your hospital remains financially stable during the process."
+      },
+      "icf_data_safety": {
+        "question": "Is my hospital's data safe with BillMart?",
+        "answer": "Absolutely! BillMart uses advanced encryption and security protocols to protect all your data and transactions. We prioritize confidentiality and safeguard your sensitive financial and medical information at every stage."
+      },
+      "icf_delays": {
+        "question": "What happens if my insurance claim is delayed longer than expected?",
+        "answer": "We understand that insurance claims can be unpredictable. If your claim is delayed or paid out partially, we offer flexible repayment solutions to ensure you're not burdened. We work with you to adjust the terms as needed, keeping your hospital's financial health intact."
+      }
+    }
+  },
+
+  "platform_benefits": {
+    "core_benefits": [
+      "Quick Funds for Businesses at Competitive Interest Rates",
+      "Time Saving, end to end Digital Processing", 
+      "In-depth Data Insights enabling Intelligent Decision Making",
+      "Lowest Transaction Cost",
+      "Access to a Network of Multiple Financiers",
+      "Highly Secured and Easy to use Technology"
+    ],
+    "platform_features": [
+      "No Indirect/Hidden Charges - Transparent pricing",
+      "Multiple Financers - Competitive interest rates through marketplace",
+      "Digital Processing - Time-saving, end-to-end digital workflow",
+      "Risk Management - AI-powered risk assessment framework",
+      "Customizable Solutions - Flexible options for specific business needs",
+      "Secure Platform - Advanced encryption and compliance"
+    ]
+  },
+
+  "general_responses": {
+    "interest_rates": "Interest rates are determined by our partner banks and financers based on credit assessment, business profile, and risk evaluation. Rates vary by product, tenure, and borrower creditworthiness. We facilitate competitive bidding to ensure you get the best rates available through our marketplace of 40+ financers.",
+    "platform_charges": "Currently, there are no registration charges, documentation charges, annual charges, or transaction charges on the BillMart platform. We believe in transparent pricing with no hidden fees.",
+    "business_model_explanation": "BillMart operates as a digital marketplace connecting borrowers with multiple financers. We do not lend money directly - we facilitate connections between businesses needing funding and financial institutions providing capital. This ensures competitive rates and multiple options for our customers.",
+    "competitive_advantage": "BillMart offers access to 40+ financers for competitive rates, transparent pricing with no hidden charges, end-to-end digital processing, AI-powered risk assessment, ISO 27001 & SOC2 certified security, and specialized solutions for MSMEs and individuals.",
+    "security_compliance": "BillMart is ISO 27001 and SOC2 certified with advanced encryption and security protocols. We protect all your data and transactions with industry-standard physical and technical safeguards while ensuring regulatory compliance.",
+    "default": "I can help you with BillMart's comprehensive range of products and services including Supply Chain Finance, EmpCash, GigCash, iMARK, Insurance Claim Finance, Lease Rental Discounting, registration process, fees, security, and any specific questions about our fintech solutions. What would you like to know?"
+  }
+}

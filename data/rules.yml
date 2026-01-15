@@ -1,0 +1,117 @@
+version: "3.1"
+
+rules:
+
+# --- GREETING & SESSION MANAGEMENT ---
+
+- rule: Greet user on session start
+  conversation_start: true
+  steps:
+    - action: action_session_start
+    - action: utter_greet
+    - action: utter_services_brief
+
+- rule: Greet user when they say hi
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_services_brief
+
+# --- MINIMAL STATE RESPONSES (Intelligent Context) ---
+
+- rule: Handle loan need (minimal state)
+  steps:
+    - intent: ask_loan_need
+    - action: action_process_with_minimal_state
+
+- rule: Handle process questions (minimal state)
+  steps:
+    - intent: ask_process
+    - action: action_process_with_minimal_state
+
+- rule: Handle business declaration (minimal state)
+  steps:
+    - intent: declare_business
+    - action: action_process_with_minimal_state
+
+- rule: Handle gig worker declaration (minimal state)
+  steps:
+    - intent: declare_gig_worker
+    - action: action_process_with_minimal_state
+
+- rule: Handle individual declaration (minimal state)
+  steps:
+    - intent: declare_individual
+    - action: action_process_with_minimal_state
+
+- rule: Handle lender declaration (minimal state)
+  steps:
+    - intent: declare_lender
+    - action: action_process_with_minimal_state
+
+# --- PRODUCT-SPECIFIC QUERIES (Minimal State) ---
+
+- rule: Handle GigCash queries (minimal state)
+  steps:
+    - intent: ask_gigcash_info
+    - action: action_process_with_minimal_state
+
+- rule: Handle EmpCash queries (minimal state)
+  steps:
+    - intent: ask_empcash_info
+    - action: action_process_with_minimal_state
+
+- rule: Handle SCF queries (minimal state)
+  steps:
+    - intent: ask_supply_chain_finance
+    - action: action_process_with_minimal_state
+
+- rule: Answer SCF collateral questions
+  steps:
+    - intent: ask_scf_collateral
+    - action: utter_scf_collateral
+# --- CONTEXT-AWARE RESPONSES (STATIC - Keep for specific cases) ---
+
+- rule: Handle eligibility questions
+  steps:
+    - intent: ask_eligibility
+    - action: action_provide_eligibility_info
+
+- rule: Company information
+  steps:
+    - intent: ask_company_info
+    - action: utter_company_info
+
+- rule: Contact information
+  steps:
+    - intent: ask_contact_info
+    - action: utter_contact_info
+
+- rule: Services overview
+  steps:
+    - intent: ask_services_offered
+    - action: utter_services_offered
+
+- rule: Document requirements
+  steps:
+    - intent: ask_documents
+    - action: utter_documents
+
+# --- BASIC INTERACTIONS ---
+
+- rule: Say goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Thank you response
+  steps:
+    - intent: thank_you
+    - action: utter_thank_you
+
+# --- INTELLIGENT FALLBACK ---
+
+- rule: Handle fallback with minimal state
+  steps:
+    - intent: nlu_fallback
+    - action: action_process_with_minimal_state
